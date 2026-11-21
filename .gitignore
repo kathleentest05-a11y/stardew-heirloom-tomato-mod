@@ -12,3 +12,11 @@ Thumbs.db
 !.vscode/settings.json
 *.swp
 *~
+
+# AI-tool sandbox mountpoints injected into the workspace (not project content)
+.muse/
+.agents/
+.eden/
+.hg/
+.sl/
+
