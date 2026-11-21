@@ -56,6 +56,8 @@ For a Nexus release, zip the pack so the zip contains the
 | `content.json` | Content Patcher patches (`Format`, `Changes`). Currently empty. |
 | `assets/` | Sprites and other files referenced by `content.json` (e.g. via `FromFile`). |
 | `i18n/default.json` | Default (English) translatable strings, referenced as `{{i18n:key}}`. |
+| `docs/requirements.md` | Requirements: variety vetting, DTM conversion, pricing, and balance rules. |
+| `docs/gift-tastes-tomatoes.md` | Research: vanilla gift tastes for raw tomato and all tomato dishes. |
 
 ## How it works (1.6, post-PPJA)
 
