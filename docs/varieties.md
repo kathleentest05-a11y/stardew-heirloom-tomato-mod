@@ -1,12 +1,28 @@
-# Tentative variety research
+# Variety research and locked v1 list
 
-Status: **Tentative — research only.** Researched 2026-11-21 by one
-subagent per variety against the criteria in
-[`docs/requirements.md`](requirements.md). **No variety recorded here is
-approved by this document, and none may be added to `content.json` on
-the strength of it.** Each entry must still complete the full
-requirements §9 checklist, starting with the outstanding formal legal
-search below.
+Status: **Research record; v1 selection locked (author, 2026-11-21).**
+Researched 2026-11-21 by one subagent per variety against the criteria
+in [`docs/requirements.md`](requirements.md).
+
+**Locked v1 variety list (8):** San Marzano + Amish Paste (paste),
+Mortgage Lifter + Black Krim + Pineapple (beefsteak), Sungold +
+Peacevine (cherry), and Green Zebra (saladette slicer). This locks
+*which varieties are in v1*; it is not §9 approval. **No variety
+recorded here is approved by this document, and none may be added to
+`content.json` on the strength of it.** Each locked entry must still
+complete its full requirements §9 checklist (outstanding items are
+listed per entry and at the end of this file). All other researched
+entries (Brandywine, Sweet 100, Kellogg's Breakfast, 4th of July) are
+excluded and retained below for the record; an early OP slicer (e.g.
+Stupice) is a post-v1/stretch candidate, not part of v1. Any addition
+or substitution requires a new recorded author decision and a full
+§3 → §9 pass. Note on terms: Sungold is a modern F1 hybrid (§3.4) and
+Peacevine and Green Zebra are modern-bred open-pollinated varieties —
+the locked list is a *variety* list, not eight heirlooms. Green Zebra
+is retained in v1 with its recipe category decided (lean menu,
+author, 2026-11-21): Caprese via beefsteak/slicing eligibility
+(requirements §7.3), with a tentative second paste dish
+(§7.7 Shakshuka) balancing the menu at two fresh + two cooked.
 
 This file is the place requirements §9 anticipated ("a table per variety
 in a future `docs/varieties.md` is fine"). Entries are deliberately
@@ -65,29 +81,37 @@ variety) and are **not** final — §8 balance checks have not been run.
 
 ## Summary
 
+Locked v1 rows are San Marzano, Mortgage Lifter, Black Krim, Sungold,
+Green Zebra, Pineapple, Peacevine, and Amish Paste. Brandywine,
+Sweet 100, Kellogg's Breakfast, and 4th of July rows are
+excluded/record-only.
+
 | Variety | §3 verdict (tentative) | Type | DTM → Stardew | Weight (mid) | Recipe |
 |---|---|---|---|---|---|
-| [San Marzano](#san-marzano) | Provisional pass, conditions — USPTO PASS + PVP clear 2026-11-21; EUIPO/WIPO formal pending | Paste (plum) | 82d → 12 | 5.0 oz ⚠️ | Bisque |
+| [San Marzano](#san-marzano) | Provisional pass, conditions — USPTO PASS + PVP clear 2026-11-21; EUIPO/WIPO formal pending | Paste (plum) | 82d → 12 | 4.0 oz ⚠️ (chosen) | Bisque (+ Shakshuka §7.7 tent.) |
 | [Mortgage Lifter](#mortgage-lifter) | Provisional pass — USPTO + PVP clear 2026-11-21 | Beefsteak | 83d → 12 | 24 oz ⚠️ | Caprese |
 | [Black Krim](#black-krim) | Provisional pass — USPTO + PVP clear 2026-11-21 | Beefsteak | 80d → 12 | 12 oz ⚠️ | Caprese |
 | [Sungold](#sungold--sun-gold) | Provisional pass, §3.4 hybrid — USPTO + PVP clear 2026-11-21 | Cherry (F1) | 60d → 9 | 0.56 oz ⚠️ | Cherry Salad |
-| [Green Zebra](#green-zebra) | Provisional pass — USPTO + PVP clear 2026-11-21 | Saladette slicer | 76d → 11 | 4.0 oz | **None — gap** |
+| [Green Zebra](#green-zebra) | Provisional pass — USPTO + PVP clear 2026-11-21 | Saladette slicer | 76d → 11 | 4.0 oz | Caprese (slicing) |
 | [Pineapple](#pineapple) | Provisional pass — USPTO (IC 031) + PVP clear 2026-11-21 | Beefsteak (bicolor) | 85d → 12 | 14–22 oz ⚠️ | Caprese |
 | [Brandywine](#brandywine) | **Doubtful → exclude** — TSDR done 2026-11-21, did not clear; PVP clear | Beefsteak | 84d → 12 | 17 oz | Caprese |
 | [Sweet 100](#sweet-100) | **Hard-blocked** | — not researched — | — | — | — |
 | [Kellogg's Breakfast](#kelloggs-breakfast) | **Doubtful → exclude** | Beefsteak (record only) | ~85d → 12 | ~24 oz | Caprese |
 | [4th of July](#4th-of-july--fourth-of-july) | **Doubtful → exclude** | — not researched — | — | — | — |
 | [Peacevine](#peacevine-addition-researched-2026-11-21) | Provisional pass (modern OP) — USPTO + PVP clear 2026-11-21 | Cherry | 73d → 11 | 0.75 oz | Cherry Salad |
-| [Amish Paste](#amish-paste-addition-researched-2026-11-21) | Provisional pass — USPTO + PVP clear 2026-11-21 | Paste (oxheart) | 82d → 12 | 9.0 oz ⚠️ | Bisque |
+| [Amish Paste](#amish-paste-addition-researched-2026-11-21) | Provisional pass — USPTO + PVP clear 2026-11-21 | Paste (oxheart) | 82d → 12 | 9.0 oz ⚠️ | Bisque (+ Shakshuka §7.7 tent.) |
 
 ⚠️ = wide source spread flagged under §6.2; the §8 balance check must
 be run at both ends of the range before §5 pricing is fixed.
 
-Overall finding: **enough varieties by count, not by composition.**
-Four of the survivors are indeterminate beefsteaks all converting to
-12 Stardew days; there is one paste, one cherry (an F1), no early
-variety except that cherry, no determinate variety at all, and one
-recipe orphan (Green Zebra). Recommendations are collected in
+Locked v1 composition (author, 2026-11-21): two pastes, three
+beefsteaks, two cherries, and one saladette, spanning 9–12 Stardew
+days. All eight are indeterminate (no determinate model in v1) and
+only Sungold converts below vanilla's 11 days (no early slicer in
+v1). Lean menu (same date): Green Zebra joins Caprese as a slicing
+type, so every locked variety has a settled dish, with tentative
+§7.7 Shakshuka as a second cooked paste dish. Composition
+discussion is collected in
 [Assessment: keep, trim, add](#assessment-keep-trim-add) at the end.
 
 ---
@@ -240,14 +264,23 @@ remain a narrow formal-confirmation item.
   at 4.0 oz. But the WSU 2004 trial *measured* 1.45 oz average, and
   the PDO spec/traditional European listings run ~1.8–4.2 oz: US
   catalogue strains are selected markedly larger than the traditional
-  Italian fruit. Pooled range 1.45–6.0 oz. **Before pricing, decide
-  which population the mod models and record it; run §8 at both
-  ends.**
+  Italian fruit. Pooled range 1.45–6.0 oz. **Weight decision
+  (author, 2026-11-21): the mod models a ~4.0 oz typical fruit** —
+  the point where the North-American catalogue point estimates
+  cluster (High Mowing, Osborne) and the top of the traditional
+  range meet — in preference to the 5.0 oz pooled midpoint, which
+  leans on the larger 5–6 oz US catalogue listings, and to the
+  1.45 oz single-trial average as a typical weight. Author
+  experience (family-grown one season, not a §6 formula source):
+  ~4 oz "seems to track". §8 must still be run at both pooled ends
+  (1.45 and 6.0 oz) per §6.2.
 - **Conversions (indicative):** StardewDays 12; indeterminate → 4-day
-  regrow (§4.3). SellPrice ≈ 80g at 5.0 oz (SeedPrice 65g), ≈ 70g at
-  the 4.0 oz cluster — either way below 100g, so no raw-fruit Loved
-  gifts (gift-tastes doc, Part II rule 2).
-- **Recipe:** paste → Heirloom Tomato Bisque (§7.6).
+  regrow (§4.3). SellPrice ≈ **70g at the chosen 4.0 oz** (SeedPrice
+  55g); pooled range ends for the §8 check: ≈ 40g at 1.45 oz,
+  ≈ 85g at 6.0 oz — every value below 100g, so no raw-fruit Loved
+  gifts at any end (gift-tastes doc, Part II rule 2).
+- **Recipe:** paste → Heirloom Tomato Bisque (§7.6) + tentative
+  Heirloom Tomato Shakshuka (§7.7).
 - **Sprite:** uniform bright/rosy red, no stripes/blush; green
   shoulders on *unripe* fruit only (crop texture), clean red at
   harvest. Signature is shape: strongly elongated plum (length
@@ -259,9 +292,10 @@ remain a narrow formal-confirmation item.
 **Outstanding:** dated human EUIPO/TMview + WIPO Global Brand
 Database name search (narrow confirmation incl. EUTM 018893642);
 author recording of the literal-"produce" reading adopted in
-§3.2.2; weight-population
-decision; §8 check; description must avoid PDO/company/strain
-names. USPTO formal search: **done 2026-11-21, PASS** (above).
+§3.2.2; §8 check at both pooled weight ends; description must
+avoid PDO/company/strain names. Weight: decided 2026-11-21
+(~4.0 oz typical, above). USPTO formal search: **done
+2026-11-21, PASS** (above).
 
 Sources include:
 [Territorial](https://territorialseed.com/products/tomato-san-marzano),
@@ -617,9 +651,11 @@ Sources include:
 ## Green Zebra
 
 **Verdict: NOT hard-blocked (provisional — USPTO + USDA PVP
-searches completed 2026-11-21, both clear),** but see the
-recipe-category gap — an author decision is needed before
-approval regardless of the legal outcome.
+searches completed 2026-11-21, both clear). Locked in v1 with recipe
+category decided (lean menu, author, 2026-11-21):** Heirloom Caprese
+via beefsteak/slicing eligibility (requirements §7.3). This does
+not reclassify Green Zebra as a beefsteak, cherry, or paste — its
+sourced type remains saladette slicer.
 
 ### §3 gate
 
@@ -684,24 +720,32 @@ approval regardless of the legal outcome.
   midpoint 4.0 oz.** No flag.
 - **Conversions (indicative):** StardewDays 11 (same as vanilla,
   phases 2,2,2,2,3); 4-day regrow. SellPrice ≈ 65g (SeedPrice 50g).
-  Below 100g: no raw-fruit Loved gifts. (If Caprese is extended to
-  slicing types, note the gift rule for Gus already says
-  "beefsteak/slicing or paste" — but the 100g threshold would still
-  exclude Green Zebra at 65g.)
-- **Recipe: GAP — qualifies for none of the three dishes as §7 is
-  written.** Not beefsteak-type (no Caprese), not cherry-type (no
-  Cherry Salad), not paste-type (no Bisque). Options needing an
-  author decision recorded here: (a) formally extend Caprese to
-  "beefsteak/slicing" (wording already used in §3.4 and the
-  gift-taste summary); (b) accept it as a no-recipe variety; (c)
-  drop it; (d) give saladette/small-slicing varieties their own
-  dish. **Do not silently reclassify it as beefsteak against the
-  sources.**
-- **Author idea for option (d) (2026-11-21, tentative/undecided):**
+  Below 100g: no raw-fruit Loved gifts. (Caprese *is* now extended
+  to slicing types — see Recipe below — and the raw-gift rule for Gus
+  already says "beefsteak/slicing or paste", but the 100g threshold
+  still excludes raw Green Zebra at 65g; recipe eligibility and raw
+  Loved status are separate tests.)
+- **Recipe: DECIDED — lean option (a) (author, 2026-11-21).**
+  Heirloom Caprese is formally extended to "beefsteak/slicing"
+  (wording already used in §3.4 and the gift-taste summary), so
+  Green Zebra qualifies *as a saladette slicer* alongside the three
+  beefsteaks (requirements §7.3). Not cherry-type (no Cherry Salad)
+  and not paste-type (no Bisque/Shakshuka). Options (b) no-recipe
+  and (c) drop are rejected by the lock + this decision; option (d)
+  below is not pursued. **Do not silently reclassify it as beefsteak
+  against the sources** — eligibility is recorded as slicing in
+  every doc and data field. (Also ruled out, author, 2026-11-21:
+  letting heirlooms substitute for the vanilla Tomato in vanilla
+  recipes — with or without a silver-quality dish bonus — per
+  requirements §2/§10.)
+- **Author idea for option (d) (2026-11-21; NOT pursued under the
+  lean decision — retained for the record, sub-questions moot unless
+  reopened by a new recorded decision):**
   a tomato-and-onion salad in the style of the author's mother's —
   red onions with saladette tomatoes such as Green Zebra (and,
-  at home, the excluded 4th of July). Unresolved before it could
-  become a requirements §7.x entry:
+  at home, the excluded 4th of July). Points that were unresolved
+  before it could become a requirements §7.x entry (all moot under
+  the lean decision):
   1. **Salad count.** It would be the third salad among four mod
      dishes (Caprese, Cherry Salad, this; plus Bisque). Distinguishing
      it by having no cheese, basil, or leafy green helps, but does
@@ -739,9 +783,11 @@ approval regardless of the legal outcome.
   hue — the most colour-blind-safe distinguisher in the set. Draw
   slightly smaller than a vanilla fruit (~2–3 in class).
 
-**Outstanding:** recipe-category decision
-(author, including the tentative tomato-and-onion-salad idea above).
-Trademark + PVP searches: done 2026-11-21 (trademark export at
+**Outstanding:** §9 final recording only (final price/gift/recipe
+rows; no wide-spread §8 flag on its data) plus the project-wide
+utility-patent decision. Recipe category: decided 2026-11-21
+(Caprese via slicing, above). Trademark + PVP searches: done
+2026-11-21 (trademark export at
 `/home/kathleen/code/tm-research/greenzebra.xlsx`, outside this repo).
 
 Sources include:
@@ -1368,12 +1414,15 @@ both-ends check.
   (≥100g) paste → Loved by Leah/Maru/Demetrius **and Gus**; at
   ≤7 oz (95g) → nobody. Do not record the Loved set until the
   population is chosen.
-- **Recipe:** paste → Heirloom Tomato Bisque (§7.6).
+- **Recipe:** paste → Heirloom Tomato Bisque (§7.6) + tentative
+  Heirloom Tomato Shakshuka (§7.7).
 - **§8 preview vs San Marzano:** same 12 days + 4d regrow, higher
-  price (105g vs ~80g), higher one-time seed cost — not strictly
-  dominant (not earlier/higher-yielding), in-band at all ends
-  (~1.08–1.54× vanilla vs San Marzano ~1.02×). Sprite distinction
-  is what keeps the two pastes from reading as reskins.
+  price (105g vs San Marzano's chosen-weight ~70g), higher one-time
+  seed cost — not strictly dominant (not earlier/higher-yielding),
+  in-band at all ends (~1.08–1.54× vanilla vs San Marzano ~0.90× at
+  its chosen weight — the §8 band floor; its formal both-ends check
+  is still to run). Sprite distinction is what keeps the two pastes
+  from reading as reskins.
 - **Sprite:** uniform bright/deep red (ignore one "red-orange"
   outlier). Fat **oxheart/teardrop**: broad shoulders tapering
   to a pointed, nippled blossom end (Fedco "mostly nippled") —
@@ -1410,7 +1459,8 @@ dominate the others on return per plant. Meanwhile:
 
 - **Paste originally had one entry** (San Marzano) — now joined by
   researched Amish Paste (provisional pass; population decision
-  pending), so Bisque no longer rests on one variety.
+  pending), so Bisque no longer rests on one variety; tentative
+  §7.7 Shakshuka would give both pastes a second, hearty cooked use.
 - **Cherry originally had one entry** (Sungold) — now joined by
   researched Peacevine (provisional pass), de-risking Cherry Salad.
 - **No early variety** except that cherry — 4th of July's slot is
@@ -1439,20 +1489,27 @@ dominate the others on return per plant. Meanwhile:
   addition such as Stupice could restore that sprite interest).
   Mortgage Lifter's 16–40+ oz spread remains the least trustworthy
   weight data in the set and drives its §8 check.
-- **Green Zebra — conditional keep.** Keep it only with an explicit
-  author decision on its recipe status (extend Caprese to slicing
-  types, or accept a no-recipe variety). Without that decision it is
-  an orphan and should be cut rather than silently reclassified.
+- **Green Zebra — locked in v1, recipe decided lean (author,
+  2026-11-21).** Retained as the eighth variety, superseding the
+  earlier conditional-keep/cut recommendation. Recipe: Heirloom
+  Caprese via the beefsteak/slicing extension (requirements §7.3) —
+  it is no longer a recipe orphan, no separate saladette/onion dish
+  is pursued, and it must not be silently reclassified as a
+  beefsteak. Menu balance is instead provided by tentative §7.7
+  Shakshuka (second cooked paste dish; 2 fresh + 2 cooked).
 
-### Add (research first — none of these is pre-cleared)
+### Add — post-v1/stretch only (research first — none is pre-cleared)
 
-Each addition needs its own §9 subagent pass (§3 gate first, then
+The v1 list is locked at eight (above); nothing in this subsection is
+part of v1. Each post-v1 addition needs a new recorded author
+decision plus its own §9 subagent pass (§3 gate first, then
 type/weight/DTM/sprite) before it can be treated as a candidate:
 
-1. **An early open-pollinated slicer** to fill the 4th of July slot
-   (~50–55d → 9–10 Stardew days) — research Stupice first (early and
-   potato-leaf, which would also reuse the Brandywine foliage work),
-   then Glacier / Bloody Butcher / Oregon Spring / Siberian.
+1. **Post-v1: an early open-pollinated slicer** to fill the 4th of
+   July slot (~50–55d → 9–10 Stardew days) — research Stupice first
+   (early and potato-leaf, which would also reuse the Brandywine
+   foliage work), then Glacier / Bloody Butcher / Oregon Spring /
+   Siberian. Not yet researched; not required for v1 asset work.
 2. ✅ **Peacevine — researched 2026-11-21, provisional pass**
    (see its entry): Alan Kapuler's dehybridised OP Sweet 100,
    renamed *because* Peto claimed "Sweet 100" as a trademark;
@@ -1475,13 +1532,14 @@ type/weight/DTM/sprite) before it can be treated as a candidate:
    701101), indeterminate with wispy foliage, elongated
    pepper-shaped red fruit in clusters of 3–5, ~80–90d.
 
-With Peacevine and Amish Paste researched in, a balanced v1 is:
-San Marzano + Amish Paste (pastes), Black Krim, Pineapple,
-Mortgage Lifter (beefsteaks; Brandywine excluded unless §3.2.2 is
-re-scoped), Sungold + Peacevine (cherries), Green Zebra (if its
-recipe status is settled) — eight varieties before any early
-slicer, which becomes the first stretch addition (Roma separately
-if a determinate model is ever wanted).
+**Locked v1 (author, 2026-11-21) — eight varieties:** San Marzano +
+Amish Paste (pastes), Mortgage Lifter + Black Krim + Pineapple
+(beefsteaks; Brandywine excluded unless §3.2.2 is re-scoped by a new
+recorded decision), Sungold + Peacevine (cherries), and Green Zebra
+(saladette slicer; Caprese-eligible under the lean beefsteak/slicing
+decision — see its entry). An early slicer is the first post-v1/stretch
+addition (Roma separately if a determinate model is ever wanted);
+neither is part of the locked v1 list.
 
 ---
 
@@ -1545,17 +1603,15 @@ claim/enforcement and §3.4 failure; exclusive F1 introduction and
 - **Brandywine:** excluded unless the author records a §3.2.2
   re-scoping decision (actual-use vs registered goods) or obtains
   legal advice — no further searching closes it.
-- San Marzano weight-population decision (US catalogue 4–6 oz vs.
-  traditional/measured ~1.5–4 oz) — record which population the mod
-  models.
 - §8 balance checks at both range ends for every ⚠️ entry, then
   final §5 prices and §7 gift/recipe recording per variety.
 - Cherry yield/regrow model (§4.3) settled jointly for Sungold
   and Peacevine (Peacevine provisional: 2 fruit / 4 days).
-- Green Zebra recipe-category decision (author, incl. tentative
-  tomato-and-onion salad: onion ingredient source, salad count,
-  Leah-vs-Jodi Loved/sender, and whether ≥2 saladettes qualify).
+- Tentative Shakshuka settlement (requirements §7.7): unlock
+  sender/hearts, Loved recipients, and exact numbers within its
+  working bands — only blocks that dish, not the settled three.
+  (Green Zebra's recipe category is decided: Caprese via slicing.)
 - Amish Paste population decision (entry) and its consequent
   100g gift row; §8 at 6 and 12 oz.
-- Research pass for an early OP slicer (Stupice first) — the one
-  Addition not yet researched.
+- (Post-v1 only, not blocking v1) Research pass for an early OP
+  slicer (Stupice first) — not part of the locked v1 list.

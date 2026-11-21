@@ -1,8 +1,20 @@
 # Heirloom Tomatoes — Requirements
 
-Status: Draft. The tentative variety list is not yet supplied, so no variety
-is approved by this document alone. Each variety must pass the per-variety
-checklist in §9 before it is added to `content.json`.
+Status: Draft. The v1 variety list is locked (author, 2026-11-21; §10 and
+[`docs/varieties.md`](varieties.md)), but locking the selection is not
+approval: no variety is approved by this document alone. Each locked
+variety must still pass the per-variety checklist in §9 before it is
+added to `content.json`, and any addition or substitution requires a new
+recorded decision and a full §3 → §9 pass.
+
+**Locked v1 variety list (8):** San Marzano and Amish Paste (paste);
+Mortgage Lifter, Black Krim, and Pineapple (beefsteak); Sungold and
+Peacevine (cherry); and Green Zebra (saladette slicer). "Variety list" is
+the accurate term, not "heirloom list": Sungold is a modern F1 hybrid
+admitted only via §3.4, and Peacevine and Green Zebra are modern-bred
+open-pollinated varieties; they must never be labelled heirloom where
+that would be inaccurate (§3.4.3, `docs/varieties.md`). Green Zebra's
+recipe category is decided (lean, §7.3): Caprese via beefsteak/slicing.
 
 This document covers the full mod: variety selection, growth timing, pricing,
 trademark vetting, in-game data, art, balance, and acceptance criteria. It is
@@ -44,8 +56,10 @@ read as relatives of it, not as a separate economy.
 - Give the harvest a kitchen and social life that follows vanilla rules:
   villager gift tastes based on the vanilla tomato (§7.2), and — after the
   variety list is set — cooking recipes that give each fruit type a job,
-  starting with Heirloom Caprese for beefsteaks (§7.3, motivates the basil
-  crop in §7.4) and a cherry salad for cherry types (§7.5).
+  starting with Heirloom Caprese for beefsteak/slicing types (§7.3,
+  motivates the basil crop in §7.4), a cherry salad for cherry types
+  (§7.5), a bisque for paste types (§7.6), and a tentative second
+  cooked paste dish (§7.7) balancing the fresh/cooked menu.
 
 ### Non-goals
 
@@ -58,6 +72,23 @@ read as relatives of it, not as a separate economy.
   use the vanilla kitchen. Generic 1.6 machine rules for vegetables (juice,
   pickles, dried produce) are sufficient unless §7 says otherwise for a
   specific variety.
+- **Out of scope: heirloom-as-vanilla-tomato substitution and
+  ingredient-driven dish quality** (considered and rejected as too
+  complex, author, 2026-11-21). Heirloom fruit does **not** count as
+  the vanilla Tomato in the eight vanilla tomato recipes, vanilla
+  `Data/CookingRecipes` entries are not edited to accept heirloom
+  IDs, and cooking a dish with an heirloom does not raise its quality
+  (no "heirloom → silver-quality dish" rule, and no heirloom +
+  Qi Seasoning → iridium stacking). Cooked-dish quality stays exactly
+  vanilla: normal by default, gold when Qi Seasoning is auto-consumed.
+  Rationale: `Data/CookingRecipes` has no per-ingredient output-quality
+  field and names fixed item/category IDs (§7.3), so both halves would
+  need SMAPI code and a new cooking system — reversing the Framework
+  decision in §10 — plus ingredient-choice/priority rules the vanilla
+  cooking UI does not offer. (Green Zebra's recipe gap is instead
+  closed by the lean beefsteak/slicing extension in §7.3.)
+  Reopening requires a new recorded decision reversing §10's
+  Content-Patcher-only framework; it is not a planned post-v1 feature.
 - No attempt at botanical simulation. Real data sets the *relative* order
   and character of varieties; Stardew balance sets the absolute numbers.
 
@@ -345,7 +376,8 @@ Following the 1.6 approach in the README, each approved variety adds:
   (stripes, ribbing, size cues), not colour alone, so varieties remain
   tellable apart at a glance and for colour-blind players.
 - **Gift tastes / recipes / bundles** — gift tastes follow §7.2 and cooking
-  recipes follow §7.3 (beefsteak), §7.5 (cherry), and §7.6 (paste).
+  recipes follow §7.3 (beefsteak/slicing), §7.5 (cherry), §7.6 (paste),
+  and — if committed after its tentative-spec gate — §7.7 (second paste dish).
   Beyond those, no Community Center bundle, quest, or
   `Data/Machines` rule is added unless a checklist entry calls for it by
   name.
@@ -367,10 +399,16 @@ elsewhere in this document to "§7.2" mean that moved section.
 
 ### 7.3 Cooking: Heirloom Caprese (starter recipe)
 
-Phase: cooking recipes are defined **after the tentative variety list**,
-because eligibility depends on which beefsteak varieties pass §9. The
-starter recipe below is settled now so the variety list can be judged
-against it; further recipes are §11 material.
+Phase: cooking recipes are defined **after the locked variety list**
+(§10), because eligibility depends on which locked beefsteak/slicing
+varieties pass §9. The starter recipe below is settled now so the
+variety list can be judged against it; further recipes are §11
+material. **Lean decision (author, 2026-11-21): Caprese eligibility
+is beefsteak/slicing, not beefsteak only** — this is how Green Zebra
+(sourced type: saladette slicer) gets a dish, without reclassifying
+it as a beefsteak and without a separate saladette recipe or onion
+crop (the expanded tomato-onion-salad route in `docs/varieties.md`
+is not pursued).
 
 Verified starting facts: vanilla Stardew Valley 1.6 has 81 cooking recipes
 and **no Caprese of any kind** — the nearest tomato dishes are Bruschetta
@@ -383,24 +421,30 @@ the mod prefix (§7) regardless of display name.
 Requirements:
 
 - **Ingredients:** Cheese (1) + Basil (1, §7.4) + Vinegar (1) + **any one
-  beefsteak-type heirloom tomato from this mod** (1). Cow Cheese stands in
-  for mozzarella; Goat Cheese is not used (it is already a Leah Loved gift
-  on its own, and requiring goats would gate a starter recipe behind a
-  deluxe barn). Paste, cherry, and vanilla tomatoes do not qualify.
+  beefsteak/slicing-type tomato from this mod** (1) — i.e. the locked
+  beefsteaks (Mortgage Lifter, Black Krim, Pineapple) plus the locked
+  saladette slicer Green Zebra, each only once it passes §9. Cow
+  Cheese stands in for mozzarella; Goat Cheese is not used (it is
+  already a Leah Loved gift on its own, and requiring goats would
+  gate a starter recipe behind a deluxe barn). Paste, cherry, and
+  vanilla tomatoes do not qualify. Green Zebra's inclusion is by its
+  sourced *slicing* type; no doc, description, or data field may
+  relabel it a beefsteak to achieve this.
   The Vinegar is the vanilla item (200g year-round at Pierre's, as in Salad,
   Coleslaw, and Radish Salad) standing in for a balsamic drizzle. **No
   balsamic item, crop, or machine rule is added for this** — one shop-bought
   bottle already in the game does the job, and a single-use artisan chain
   for one salad is exactly the bloat this mod avoids. The dish description
   may call it a balsamic-style dressing; the data stays plain Vinegar.
-- **"Any beefsteak" must be prototyped, not assumed.** A vanilla
+- **"Any beefsteak/slicing" must be prototyped, not assumed.** A vanilla
   `Data/CookingRecipes` entry names fixed ingredient item/category IDs, so
   accepting several different fruit IDs needs a proven mechanism (e.g. a
   shared category/context-tag ingredient if 1.6 honours one for cooking,
   or one recipe entry per qualifying variety yielding the same dish).
   Before the recipe is committed, prototype it in-game and record which
-  mechanism shipped, proving both directions: every approved beefsteak
-  variety cooks it, and no non-beefsteak or vanilla vegetable does. If a
+  mechanism shipped, proving both directions: every approved
+  beefsteak/slicing variety (including Green Zebra) cooks it, and no
+  paste, cherry, vanilla tomato, or other vegetable does. If a
   mechanism produces duplicate cookbook entries or accepts wrong items,
   it fails and the fallback is re-decided before release — silently
   narrowing to a single variety is not allowed.
@@ -409,8 +453,9 @@ Requirements:
   cheese, green basil — readable at icon size) and i18n name/description.
   Energy/health between Salad/Bruschetta (113 energy) and the vinegar
   salads (Radish Salad: 200 energy), sell price in the 250–300g band —
-  above Bruschetta (210g) because of the 200g Vinegar and 100g-class
-  tomato, but still not the sum of its ingredients, consistent with
+  above Bruschetta (210g) because of the 200g Vinegar and the
+  (usually 100g-class, Green Zebra excepted) slicing tomato, but
+  still not the sum of its ingredients, consistent with
   vanilla salads — and **no buff** by default. Exact numbers are fixed when
   the recipe is implemented and recorded with the §8-style arithmetic,
   including the purchased-Vinegar cost.
@@ -475,8 +520,9 @@ Caprese recipe to Cornucopia's basil.**
 
 ### 7.5 Cooking: Heirloom Cherry Salad (second recipe)
 
-Phase: same as §7.3 — defined after the tentative variety list, once it is
-known which cherry types pass §9. Its job is to give cherry/small-fruited
+Phase: same as §7.3 — defined after the locked variety list (§10), once
+it is known which locked cherry types pass §9. Its job is to give
+cherry/small-fruited
 varieties (§4.3) a use Heirloom Caprese deliberately denies them.
 
 On the obvious cherry candidate: **Sungold is eligible only via §3.4.**
@@ -507,10 +553,11 @@ Requirements:
   was the runner-up (vanilla Salad's own green) and is recorded as
   rejected so it is not relitigated per implementation.
 - **"Any cherry" mechanism:** identical constraint and prototype duty as
-  §7.3's "any beefsteak" — prove every approved cherry type cooks it and
-  no other tomato or vegetable does, with no duplicate cookbook entries.
-  The two recipes should ship on the *same* proven mechanism; if that
-  mechanism fails, both recipes are re-decided together.
+  §7.3's "any beefsteak/slicing" — prove every approved cherry type
+  cooks it and no other tomato or vegetable does, with no duplicate
+  cookbook entries. All "any <type>" recipes (§§7.3/7.5/7.6 and the
+  tentative §7.7) should ship on the *same* proven mechanism; if that
+  mechanism fails, they are re-decided together.
 - **Dish object:** own sprite (halved cherries over dark greens — readable
   at 16×16) and i18n name/description. Model its numbers on Radish Salad,
   vanilla's Oil + Vinegar + produce template (200 energy, 300g): target
@@ -529,7 +576,7 @@ Requirements:
 
 ### 7.6 Cooking: Heirloom Tomato Bisque (paste-variety dish)
 
-Phase: after the tentative variety list, like §§7.3/7.5. Settled after a
+Phase: after the locked variety list (§10), like §§7.3/7.5. Settled after a
 full audit of vanilla gift tastes for raw tomato and all eight vanilla
 tomato dishes — see `docs/gift-tastes-tomatoes.md`, which this section's
 choices cite. Vanilla has a Lobster Bisque (loved by nobody) but no
@@ -554,7 +601,8 @@ Requirements:
   vanilla tomatoes do not qualify.
 - **"Any paste" mechanism:** the same proven mechanism as §7.3/§7.5,
   with the same both-directions prototype proof. If that mechanism
-  fails, all three dishes are re-decided together.
+  fails, all "any <type>" dishes (including tentative §7.7) are
+  re-decided together.
 - **Dish object:** own 16×16 sprite (bowl of deep-red soup, pale swirl),
   i18n name/description. Numbers modelled on the vanilla soup band
   (Pumpkin Soup 300g/200 energy; Lobster Bisque 205g/225 energy): target
@@ -575,6 +623,58 @@ Requirements:
   needs no compensation. Verify Gus (Loved), Jodi (Loved), Robin and
   Sebastian (Liked, *not* Loved), three ordinary Likers, and the expected
   cooked-dish Dislikers Krobus, Leo, and Willy (see the audit doc).
+
+### 7.7 Cooking: Heirloom Tomato Shakshuka (tentative second paste dish)
+
+Status: **tentative candidate** (author, 2026-11-21), recorded as part
+of the lean menu decision in §7.3: two fresh dishes (Caprese incl.
+Green Zebra, Cherry Salad) balanced by two cooked paste dishes
+(Bisque, this). It becomes a committed dish only when (a) the shared
+"any paste" mechanism is prototyped per §7.6, and (b) its unlock,
+gift tastes, and exact numbers below are settled and recorded. If
+the mechanism fails, this dish is re-decided together with
+§§7.3/7.5/7.6, not rescued by narrowing to one paste variety.
+
+Why a second paste dish earns its slot (not salad-ratio cosmetics):
+paste varieties are cooking tomatoes — San Marzano in particular has
+no raw-fruit Loved gift at its chosen 70g — and §7.6 is a late
+(Gus 7♥) milk-based soup. A hearty, earlier, non-soup paste dish
+gives the type a distinct second job and an earlier special use.
+
+Candidate spec (to be settled before commitment):
+
+- **Name:** **Heirloom Tomato Shakshuka**, prefixed item/recipe IDs
+  as §7.1. (Check for display-name collisions with common recipe
+  mods at implementation time, as §7.3 did for Caprese.)
+- **Ingredients:** **any one paste-type tomato from this mod
+  (×2 fruit)** + Egg (1, any egg via the vanilla egg-category
+  ingredient) + Hot Pepper (1). No Wheat Flour — this must not become
+  a Spaghetti/Pizza reskin (§7.6) — and no new crop, item, or basil
+  dependency. Beefsteak/slicing, cherry, and vanilla tomatoes do not
+  qualify. Paste types are the culinary fit: low-moisture fruit
+  cooks down to a thick sauce that does not waterlog the eggs. The
+  ×2 count is revisited with paste yields, as in §7.6.
+- **"Any paste" mechanism:** identical constraint and both-directions
+  prototype proof as §7.6 (every approved paste variety cooks it; no
+  other tomato or vegetable does; no duplicate cookbook entries).
+- **Dish object:** own 16×16 sprite (dark skillet, red sauce, white/
+  yolk egg — readable at icon size) and i18n name/description.
+  Working target band only: sell **200–350g**, energy **150–225**,
+  **no buff** by default (consistent with §§7.3–7.6). Exact values
+  are fixed at implementation with the arithmetic recorded, using
+  both paste varieties' final §5 prices.
+- **Unlock + gift tastes (unsettled — record the choice here before
+  commitment):** working assumption is an early mail unlock (3+
+  hearts, mirroring the salads' progression) so paste has a use
+  before Gus 7♥. Evidence-based candidates from the gift audit
+  (`docs/gift-tastes-tomatoes.md`): Shane (loves Hot Pepper, Pepper
+  Poppers, and Pizza; cooked tomato overcomes his raw-tomato
+  dislike) and Jodi (loves two vanilla tomato dishes) as Loved
+  recipients, with sender to be chosen between them (or Gus, at the
+  cost of a third Gus recipe). Do not add Leah by default — she is
+  already Loved on both salads (audit Part I point 4). Whoever is
+  chosen, verify the Loved pair, three ordinary Likers, and the
+  expected cooked-dish Dislikers Krobus, Leo, and Willy.
 
 ## 8. Balance acceptance check
 
@@ -622,8 +722,9 @@ SeedPrice and shop entry:
 §8 balance result vs vanilla (both range ends if flagged):
 Gift tastes (§7.2: final price vs 100g, fruit type, Loved by which of
   Leah / Maru / Demetrius / Gus — expected: none below 100g):
-Recipe eligibility (sourced fruit type §4.1): beefsteak → Caprese (§7.3),
-  cherry → Cherry Salad (§7.5), paste → Tomato Bisque (§7.6):
+Recipe eligibility (sourced fruit type §4.1): beefsteak/slicing (incl.
+  saladette slicer) → Caprese (§7.3), cherry → Cherry Salad (§7.5),
+  paste → Tomato Bisque (§7.6) + tentative Shakshuka (§7.7):
 Sprite / crop-texture notes (distinguishing traits, §7):
 ```
 
@@ -632,33 +733,46 @@ Sprite / crop-texture notes (distinguishing traits, §7):
 | Decision | Choice |
 | --- | --- |
 | Document scope | Full mod requirements (this document) |
+| Variety list (v1) | Locked (author, 2026-11-21): San Marzano + Amish Paste (paste), Mortgage Lifter + Black Krim + Pineapple (beefsteak), Sungold + Peacevine (cherry), Green Zebra (saladette). Selection only — each still needs §9 sign-off before `content.json`; excluded researched varieties (Brandywine, Sweet 100, Kellogg's Breakfast, 4th of July) stay out, and an early OP slicer (e.g. Stupice) is post-v1/stretch, not v1. Sungold is a §3.4 modern F1 and Peacevine/Green Zebra are modern-bred OP, never mislabelled heirloom. Research record: `docs/varieties.md` |
 | DTM conversion | Proportional to vanilla, Summer-capped (§4.2) |
 | Pricing | Formula anchored to vanilla 60g / 50g seed (§5) |
 | Trademarked varieties | Hard exclusion, no renames (§3) |
 | Framework | Content Patcher only, Stardew Valley 1.6+ (README) |
+| Vanilla-recipe substitution / dish quality | Out of scope (author, 2026-11-21): heirlooms do not substitute for the vanilla Tomato in vanilla recipes, and ingredient identity never changes cooked-dish quality (no heirloom→silver, no heirloom+Qi Seasoning→iridium); Qi Seasoning remains vanilla set-to-gold. Too complex — would require a SMAPI code cooking system. See §2 Non-goals |
 | Season | Summer for all varieties (§4.2) |
-| Raw-fruit gifting | Vanilla tomato baseline; 100g+ Loved by Leah/Maru/Demetrius, plus Gus for 100g+ beefsteak/paste only (§7.2) |
-| Starter recipe | Heirloom Caprese after variety list: Cheese + Basil + vanilla Vinegar (no balsamic item) + any beefsteak heirloom; Gus 3-heart mail; Loved by Leah + Gus + Lewis, Lewis cooked-only (§7.3) |
+| Raw-fruit gifting | Vanilla tomato baseline; 100g+ Loved by Leah/Maru/Demetrius, plus Gus for 100g+ beefsteak/slicing or paste only (§7.2) |
+| Starter recipe | Heirloom Caprese after variety list: Cheese + Basil + vanilla Vinegar (no balsamic item) + any beefsteak/slicing tomato from this mod (lean decision, author 2026-11-21 — includes Green Zebra as saladette slicer, never relabelled beefsteak; no separate saladette/onion recipe); Gus 3-heart mail; Loved by Leah + Gus + Lewis, Lewis cooked-only (§7.3) |
 | Basil | Own Summer basil crop + `BasilSource` config (`Auto`/`Ours`/`Cornucopia`) swapping Caprese to Cornucopia basil when installed (§7.4) |
 | Second recipe | Heirloom Cherry Salad after variety list: Oil + Vinegar + Kale (no arugula) + any cherry heirloom ×2; Harvey 3-heart mail; Loved by Leah + Harvey (§7.5) |
 | Sungold | First §3.4 selective-hybrid candidate — in under its own name if the full legal gate passes; labelled modern F1, never heirloom (§3.4, §7.5) |
 | Hybrids in general | Selective only: benchmark-unique, legally clean, one per fruit type, individually approved (§3.4) |
 | Paste dish | Heirloom Tomato Bisque after variety list: paste heirloom ×2 + Milk; Gus 7-heart mail; Loved by Gus + Jodi. Robin reservation withdrawn per gift audit (§7.6) |
+| Second paste dish (tentative) | Heirloom Tomato Shakshuka candidate (author, 2026-11-21, lean menu): any paste ×2 + Egg (any) + Hot Pepper, no Wheat Flour/new crop; hearty earlier cooked counterpart to Bisque so the menu is 2 fresh + 2 cooked. Tentative only — committed only after the §7.7 spec gate (prototype + settled unlock/gifts/numbers) |
 
 ## 11. Open questions
 
-- The tentative variety list (to be supplied by the author). Each entry
-  then goes through §9 in order; §3 vetting comes first, before any data
-  collection effort is spent on a variety that may be excluded.
-- Determinate modelling (§4.3): confirm per variety whether no-regrow with
-  multiple fruit or a short-regrow flush feels right in playtesting.
-- Cherry/small-fruited yields: 3-day regrow, multiple fruit per harvest, or
-  both — to be settled against the §8 band once candidates exist.
+- Per-variety §9 sign-off for the locked v1 list (§10,
+  `docs/varieties.md`): remaining §8 range-end checks and final §5 prices;
+  San Marzano's EUIPO/WIPO confirmation and literal-"produce" reading
+  (its weight is decided: ~4.0 oz typical, `docs/varieties.md`);
+  Amish Paste's population (and consequent
+  100g gift row); and the project-wide §3.1 utility-patent decision
+  (search, or record why existing evidence suffices). (Green Zebra's
+  recipe category is decided: Caprese via beefsteak/slicing, §7.3.)
+- Tentative §7.7 Shakshuka settlement: exact unlock sender/hearts,
+  Loved recipients, and energy/price within its working bands, to be
+  recorded in §7.7 before it counts as a committed dish.
+- Determinate modelling (§4.3): not a v1 question — all eight locked
+  varieties are indeterminate, so the determinate model stays untested
+  unless a future post-v1 addition (e.g. Roma) is approved.
+- Cherry/small-fruited yields for Sungold + Peacevine: 3-day regrow,
+  multiple fruit per harvest, or both — to be settled jointly against
+  the §8 band (Peacevine provisional model: 2 fruit / 4 days).
 - Whether any variety warrants a non-Pierre source (Traveling Cart,
   JojaMart) or a farming-level unlock; default is plain Pierre's, Summer.
-- Implementation unknowns to close by prototype, not debate (§§7.3–7.6):
-  the shared "any beefsteak / any cherry / any paste" ingredient
+- Implementation unknowns to close by prototype, not debate (§§7.3–7.7):
+  the shared "any beefsteak/slicing / any cherry / any paste" ingredient
   mechanism; Cornucopia – More Crops' exact `UniqueID` and basil item ID;
-  our basil's exact days/prices; all three dishes' exact energy/price,
-  cherry and paste fruit counts once yields (§4.3) are fixed, and the
-  Gus/Harvey letter texts.
+  our basil's exact days/prices; the settled dishes' (and, if committed,
+  §7.7's) exact energy/price, cherry and paste fruit counts once yields
+  (§4.3) are fixed, and the recipe letter texts.
