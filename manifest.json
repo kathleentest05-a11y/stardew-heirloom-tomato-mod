@@ -1,0 +1,21 @@
+{
+  "Name": "Heirloom Tomatoes",
+  "Author": "kathleentest05-a11y",
+  "Version": "1.0.0",
+  "Description": "Adds several heirloom tomato varieties to Stardew Valley using Content Patcher.",
+  "UniqueID": "kathleentest05-a11y.HeirloomTomatoes",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.9.0"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "MinimumVersion": "2.9.0",
+      "IsRequired": true
+    }
+  ],
+  "UpdateKeys": []
+}
