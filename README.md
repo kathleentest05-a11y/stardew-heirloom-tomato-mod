@@ -2,9 +2,12 @@
 
 Adds several heirloom tomato varieties to Stardew Valley using Content Patcher.
 
-> Status: skeleton only. `content.json` currently has no patches — tomato
-> varieties, crops, sprites, and shop entries will be added once the mod
-> requirements are fleshed out.
+> Status: vegetables only. `content.json` adds the 8 locked varieties'
+> fruit objects (`Data/Objects`, provisional §5 prices, placeholder
+> sprites in `assets/objects.png`). Crops, seeds, shops, recipes, and
+> gift tastes are not added yet, so the fruit is only obtainable with a
+> debug/item-spawn mod for now. Prices and art remain provisional until
+> each variety's §9 sign-off (see `docs/requirements.md` §11).
 
 ## Requirements
 
@@ -42,8 +45,12 @@ This repository root is the content pack folder itself.
    ```
 
 3. Launch the game through SMAPI. The SMAPI console should list
-   `Heirloom Tomatoes 1.0.0 by kathleentest05-a11y | for Content Patcher`.
-   With the skeleton `content.json`, nothing changes in-game yet.
+   `Heirloom Tomatoes 1.0.0 by kathleentest05-a11y | for Content Patcher`
+   with no Content Patcher errors for this pack. The 8 tomato fruit
+   items exist in `Data/Objects` but cannot be grown or bought yet;
+   spawn one by its ID (e.g.
+   `(O)kathleentest05-a11y.HeirloomTomatoes_GreenZebraTomato`) with a
+   debug/item-spawn mod to check its name, price, and placeholder sprite.
 
 For a Nexus release, zip the pack so the zip contains the
 `[CP] Heirloom Tomatoes` folder (not loose files at the zip root).
@@ -53,8 +60,8 @@ For a Nexus release, zip the pack so the zip contains the
 | Path | Purpose |
 | --- | --- |
 | `manifest.json` | SMAPI mod identity. `ContentPackFor` marks this as a Content Patcher pack. |
-| `content.json` | Content Patcher patches (`Format`, `Changes`). Currently empty. |
-| `assets/` | Sprites and other files referenced by `content.json` (e.g. via `FromFile`). |
+| `content.json` | Content Patcher patches (`Format`, `Changes`). Currently: object spritesheet `Load` + 8 fruit entries in `Data/Objects`. |
+| `assets/` | Sprites and other files referenced by `content.json` (e.g. via `FromFile`). `objects.png` holds placeholder 16×16 fruit sprites (indices 0–7, in `content.json` order); final art replaces this sheet at the same indices. |
 | `i18n/default.json` | Default (English) translatable strings, referenced as `{{i18n:key}}`. |
 | `docs/requirements.md` | Requirements: variety vetting, DTM conversion, pricing, and balance rules. |
 | `docs/gift-tastes-tomatoes.md` | Research: vanilla gift tastes for raw tomato and all tomato dishes. |

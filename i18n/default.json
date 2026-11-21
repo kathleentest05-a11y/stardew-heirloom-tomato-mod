@@ -1,2 +1,18 @@
 {
+  "SanMarzanoTomato.name": "San Marzano",
+  "SanMarzanoTomato.description": "An old Italian plum tomato for sauce. Long, dense, and meaty with little juice.",
+  "AmishPasteTomato.name": "Amish Paste",
+  "AmishPasteTomato.description": "A fat, heart-shaped paste tomato. Meaty and sweet, it cooks down thick.",
+  "MortgageLifterTomato.name": "Mortgage Lifter",
+  "MortgageLifterTomato.description": "A huge pink beefsteak for slicing. One fat slice can cover a sandwich.",
+  "BlackKrimTomato.name": "Black Krim",
+  "BlackKrimTomato.description": "A dark mahogany beefsteak with green shoulders. Rich-tasting in thick slices.",
+  "PineappleTomato.name": "Pineapple Tomato",
+  "PineappleTomato.description": "A big yellow beefsteak blushed red at the blossom end. The cut fruit is marbled yellow and red.",
+  "SungoldTomato.name": "Sungold",
+  "SungoldTomato.description": "A modern F1 cherry tomato. Tiny orange fruit in long, grape-like trusses — very sweet.",
+  "PeacevineTomato.name": "Peacevine",
+  "PeacevineTomato.description": "A modern open-pollinated red cherry tomato. Small round fruit in dense clusters.",
+  "GreenZebraTomato.name": "Green Zebra",
+  "GreenZebraTomato.description": "A modern open-pollinated salad tomato. Green-gold with dark stripes, tangy in wedges."
 }

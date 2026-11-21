@@ -1,4 +1,106 @@
 {
   "Format": "2.9.0",
-  "Changes": []
+  "Changes": [
+    {
+      "LogName": "Heirloom tomato object sprites (placeholder art)",
+      "Action": "Load",
+      "Target": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+      "FromFile": "assets/objects.png"
+    },
+    {
+      "LogName": "Heirloom tomato vegetables (fruit objects only; crops/seeds/shops/recipes/gift tastes not yet added)",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "kathleentest05-a11y.HeirloomTomatoes_SanMarzanoTomato": {
+          "Name": "San Marzano Tomato",
+          "DisplayName": "{{i18n: SanMarzanoTomato.name}}",
+          "Description": "{{i18n: SanMarzanoTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 70,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 0,
+          "Edibility": 7
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_AmishPasteTomato": {
+          "Name": "Amish Paste Tomato",
+          "DisplayName": "{{i18n: AmishPasteTomato.name}}",
+          "Description": "{{i18n: AmishPasteTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 105,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 1,
+          "Edibility": 11
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_MortgageLifterTomato": {
+          "Name": "Mortgage Lifter Tomato",
+          "DisplayName": "{{i18n: MortgageLifterTomato.name}}",
+          "Description": "{{i18n: MortgageLifterTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 170,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 2,
+          "Edibility": 18
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_BlackKrimTomato": {
+          "Name": "Black Krim Tomato",
+          "DisplayName": "{{i18n: BlackKrimTomato.name}}",
+          "Description": "{{i18n: BlackKrimTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 120,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 3,
+          "Edibility": 12
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_PineappleTomato": {
+          "Name": "Pineapple Tomato",
+          "DisplayName": "{{i18n: PineappleTomato.name}}",
+          "Description": "{{i18n: PineappleTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 130,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 4,
+          "Edibility": 13
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_SungoldTomato": {
+          "Name": "Sungold Tomato",
+          "DisplayName": "{{i18n: SungoldTomato.name}}",
+          "Description": "{{i18n: SungoldTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 20,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 5,
+          "Edibility": 3
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_PeacevineTomato": {
+          "Name": "Peacevine Tomato",
+          "DisplayName": "{{i18n: PeacevineTomato.name}}",
+          "Description": "{{i18n: PeacevineTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 30,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 6,
+          "Edibility": 3
+        },
+        "kathleentest05-a11y.HeirloomTomatoes_GreenZebraTomato": {
+          "Name": "Green Zebra Tomato",
+          "DisplayName": "{{i18n: GreenZebraTomato.name}}",
+          "Description": "{{i18n: GreenZebraTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 65,
+          "Texture": "Mods/kathleentest05-a11y.HeirloomTomatoes/Objects",
+          "SpriteIndex": 7,
+          "Edibility": 7
+        }
+      }
+    }
+  ]
 }
