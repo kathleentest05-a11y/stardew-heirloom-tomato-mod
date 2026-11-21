@@ -1,0 +1,26 @@
+name: Package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Package mod
+        run: ./scripts/package.sh
+
+      - name: Upload packaged mod
+        uses: actions/upload-artifact@v7
+        with:
+          name: HeirloomTomatoes
+          path: dist/*.zip
+          if-no-files-found: error

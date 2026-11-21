@@ -1,7 +1,8 @@
 # Generated at runtime by SMAPI / Content Patcher — do not commit
 config.json
 
-# Release archives
+# Release archives (built by scripts/package.sh)
+dist/
 *.zip
 
 # OS / editor noise
