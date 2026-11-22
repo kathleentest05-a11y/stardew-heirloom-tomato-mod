@@ -11,6 +11,8 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 20,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 8,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
@@ -23,6 +25,8 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 30,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 9,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
@@ -35,6 +39,8 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 50,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 10,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
@@ -47,6 +53,8 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 35,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 11,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
@@ -59,6 +67,36 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 40,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 12,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_SungoldTomato_Seed": {
+          "Name": "Sungold Tomato Seeds",
+          "DisplayName": "{{i18n: SungoldTomato_Seed.name}}",
+          "Description": "{{i18n: SungoldTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 25,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 13,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_PeacevineTomato_Seed": {
+          "Name": "Peacevine Tomato Seeds",
+          "DisplayName": "{{i18n: PeacevineTomato_Seed.name}}",
+          "Description": "{{i18n: PeacevineTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 55,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 14,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
@@ -71,35 +109,13 @@
           "Type": "Seeds",
           "Category": -74,
           "Price": 45,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 15,
           "Edibility": -300,
           "ContextTags": [
             "heirloom_tomato_seed"
           ]
         }
-      },
-      "{{ModId}}_SungoldTomato_Seed": {
-        "Name": "Sungold Tomato Seeds",
-        "DisplayName": "{{i18n: SungoldTomato_Seed.name}}",
-        "Description": "{{i18n: SungoldTomato_Seed.description}}",
-        "Type": "Seeds",
-        "Category": -74,
-        "Price": 25,
-        "Edibility": -300,
-        "ContextTags": [
-          "heirloom_tomato_seed"
-        ]
-      },
-      "{{ModId}}_PeacevineTomato_Seed": {
-        "Name": "Peacevine Tomato Seeds",
-        "DisplayName": "{{i18n: PeacevineTomato_Seed.name}}",
-        "Description": "{{i18n: PeacevineTomato_Seed.description}}",
-        "Type": "Seeds",
-        "Category": -74,
-        "Price": 55,
-        "Edibility": -300,
-        "ContextTags": [
-          "heirloom_tomato_seed"
-        ]
       }
     }
   ]

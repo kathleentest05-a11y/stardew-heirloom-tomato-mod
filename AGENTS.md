@@ -45,7 +45,7 @@ Also consult the Stardew modding links in `README.md`. Prefer 1.6/game-data beha
 The repository contains provisional data for eight locked v1 varieties. Treat it as implementation-in-progress, not as all data being approved:
 
 - Fruit objects and a placeholder 16x16 fruit spritesheet currently exist.
-- Seed objects and crop entries exist, but custom seed/crop art does not.
+- Seed objects now have placeholder 16x16 seed packet art in `assets/sprites/objects.png` (indices 8–15); crop entries exist, but custom crop (in-ground growth stage) art does not.
 - Shop, recipe, and gift-taste files are placeholders and not implemented.
 - No variety is considered fully approved until its `docs/requirements.md` §9 checklist is complete.
 
@@ -69,7 +69,7 @@ When `docs/varieties.md` marks a search or checklist item outstanding, leave the
 ## Art and asset conventions
 
 - Preserve 16x16 object sprite sizing and use a whole-pixel placement.
-- `assets/sprites/objects.png` indices are ordered 0–7 in the fruit-entry order.
+- `assets/sprites/objects.png` indices are ordered 0–7 in the fruit-entry order, then 8–15 for the matching seed packets in that same variety order (e.g. San Marzano fruit = 0, San Marzano seed packet = 8).
 - If the spritesheet changes, verify every `SpriteIndex` and update the documentation.
 - Future crop textures must be mod-owned assets referenced explicitly; do not patch vanilla crop tilesheets unless the requirement and test context explicitly calls for it.
 - Distinguish varieties visibly by shape and pattern, not by color alone.
