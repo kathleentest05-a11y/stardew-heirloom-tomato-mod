@@ -1,12 +1,15 @@
 {
   "Changes": [
     {
+      "LogName": "Heirloom tomato crop data (draft crop art)",
       "Action": "EditData",
       "Target": "Data/Crops",
       "Entries": {
         "{{ModId}}_SanMarzanoTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_SanMarzanoTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 0,
           "RegrowDays": 5,
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
@@ -15,6 +18,8 @@
         "{{ModId}}_AmishPasteTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_AmishPasteTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 1,
           "RegrowDays": 5,
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
@@ -23,24 +28,32 @@
         "{{ModId}}_MortgageLifterTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_MortgageLifterTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 2,
           "RegrowDays": 5,
           "DaysInPhase": [2, 2, 2, 3, 3]
         },
         "{{ModId}}_BlackKrimTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_BlackKrimTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 3,
           "RegrowDays": 5,
           "DaysInPhase": [2, 2, 2, 3, 3]
         },
         "{{ModId}}_PineappleTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_PineappleTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 4,
           "RegrowDays": 5,
           "DaysInPhase": [2, 2, 2, 3, 3]
         },
         "{{ModId}}_SungoldTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_SungoldTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 5,
           "RegrowDays": 3,
           "HarvestMinStack": 2,
           "HarvestMaxStack": 4,
@@ -49,6 +62,8 @@
         "{{ModId}}_PeacevineTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_PeacevineTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 6,
           "RegrowDays": 3,
           "HarvestMinStack": 2,
           "HarvestMaxStack": 4,
@@ -57,6 +72,8 @@
         "{{ModId}}_GreenZebraTomato_Seed": {
           "Seasons": ["summer"],
           "HarvestItemId": "{{ModId}}_GreenZebraTomato",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 7,
           "RegrowDays": 5,
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,

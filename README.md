@@ -4,10 +4,9 @@ Adds several heirloom tomato varieties to Stardew Valley using Content Patcher.
 
 > Status: provisional placeholder data for 8 heirloom tomato varieties.
 > `content.json` adds the fruit objects, seeds, and summer crop definitions,
-> plus shop data, recipes, and gift tastes. Fruit objects use placeholder
-> sprites in `assets/sprites/objects.png`; seed and crop sprites are not
-> added yet, so growing and item sprites will use placeholder/vanilla
-> behavior until custom art is supplied. Prices and art remain provisional
+> plus shop data, recipes, and gift tastes. Fruit and seed objects use
+> placeholder sprites in `assets/sprites/objects.png`, and crops use draft
+> growth-stage sprites in `assets/sprites/crops.png`. Prices and art remain provisional
 > until each variety's §9 sign-off (see `docs/requirements.md` §11).
 
 ## Requirements
@@ -49,8 +48,8 @@ This repository root is the content pack folder itself.
    `Heirloom Tomatoes 1.0.0 by kathleentest05-a11y | for Content Patcher`
    with no Content Patcher errors for this pack. The 8 tomato fruit
    items and seed items exist in `Data/Objects`, with crop definitions in
-   `Data/Crops`. Seed and crop art is not present; the fruit items use
-   placeholder sprites. Spawn a fruit by its ID (e.g.
+   `Data/Crops`. Fruit and seed items use placeholder sprites; crops use
+   draft growth-stage sprites. Spawn a fruit by its ID (e.g.
    `(O)kathleentest05-a11y.HeirloomTomatoes_GreenZebraTomato`) with a
    debug/item-spawn mod to check its name, price, and placeholder fruit
    sprite.
@@ -97,8 +96,8 @@ Use `-WhatIf` to preview the action.
 | Path | Purpose |
 | --- | --- |
 | `manifest.json` | SMAPI mod identity. `ContentPackFor` marks this as a Content Patcher pack. |
-| `content.json` | Content Patcher patches (`Format`, `Changes`). Loads the placeholder object spritesheet and includes the fruit, seed, crop, shop, recipe, and gift-taste data. |
-| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in `content.json` order). No custom seed or crop sprites are included. |
+| `content.json` | Content Patcher patches (`Format`, `Changes`). Loads the placeholder object and draft crop spritesheets and includes the fruit, seed, crop, shop, recipe, and gift-taste data. |
+| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in fruit-entry order) and seed packets (8–15, same order). `assets/sprites/crops.png` holds draft crop growth sprites (256×128; crop `SpriteIndex` 0–7 in the same variety order, two crops per row). |
 | `i18n/default.json` | Default (English) translatable strings, referenced as `{{i18n:key}}`. |
 | `docs/requirements.md` | Requirements: variety vetting, DTM conversion, pricing, and balance rules. |
 | `docs/gift-tastes-tomatoes.md` | Research: vanilla gift tastes for raw tomato and all tomato dishes. |
@@ -116,9 +115,9 @@ patches to:
 - `Data/Crops` — seasons, growth phases, regrow, harvest item, trellis, etc.
   The entry key is the seed item's ID.
 - `Data/Shops` — provisional seed availability (e.g. at Pierre's).
-- Sprites — fruit sprites are loaded from the placeholder object spritesheet.
-  Seed and crop sprites are not included yet; their data entries currently
-  contain no custom seed or crop art.
+- Sprites — fruit and seed sprites are loaded from the placeholder object
+  spritesheet; crop growth sprites from the draft crop spritesheet
+  (`Mods/{{ModId}}/Crops`).
 
 Optional, as needed: `Data/NPCGiftTastes`, `Data/CookingRecipes`,
 `Data/CraftingRecipes`, and `Data/Machines` (keg / preserves jar / dehydrator

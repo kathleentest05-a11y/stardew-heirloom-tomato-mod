@@ -8,6 +8,12 @@
       "FromFile": "assets/sprites/objects.png"
     },
     {
+      "LogName": "Heirloom tomato crop growth sprites (draft art)",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Crops",
+      "FromFile": "assets/sprites/crops.png"
+    },
+    {
       "LogName": "Heirloom tomato vegetables (fruit objects only; crops/seeds/shops/recipes/gift tastes not yet added)",
       "Action": "Include",
       "FromFile": "assets/json/tomatoes.json"
