@@ -1,9 +1,10 @@
 name: Package
 
 on:
-  push:
   pull_request:
-  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
 
 permissions:
   contents: read
@@ -15,12 +16,22 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
 
+      - name: Set beta package suffix
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "PACKAGE_VERSION_SUFFIX=-beta.${{ github.event.pull_request.number }}.${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+
+      - name: Set release-candidate package suffix
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          echo "PACKAGE_VERSION_SUFFIX=-rc.${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+
       - name: Package mod
         run: ./scripts/package.sh
 
       - name: Upload packaged mod
         uses: actions/upload-artifact@v7
         with:
-          name: HeirloomTomatoes
+          name: ${{ github.event_name == 'pull_request' && format('HeirloomTomatoes-PR-{0}-beta', github.event.pull_request.number) || 'HeirloomTomatoes-release-candidate' }}
           path: dist/*.zip
           if-no-files-found: error

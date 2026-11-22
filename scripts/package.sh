@@ -34,7 +34,10 @@ if [ -z "$version" ]; then
     exit 1
 fi
 
-zip_path="$dist_dir/HeirloomTomatoes-${version}.zip"
+# CI can append a beta or release-candidate suffix without changing
+# the mod's manifest version.
+package_version="${version}${PACKAGE_VERSION_SUFFIX:-}"
+zip_path="$dist_dir/HeirloomTomatoes-${package_version}.zip"
 
 staging="$(mktemp -d)"
 trap 'rm -rf "$staging"' EXIT

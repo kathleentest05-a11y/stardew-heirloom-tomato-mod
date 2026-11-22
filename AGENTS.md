@@ -87,24 +87,15 @@ When `docs/varieties.md` marks a search or checklist item outstanding, leave the
 
 ## Validation
 
-At minimum, after changing JSON or runtime files:
-
-```powershell
-python -m json.tool manifest.json
-python -m json.tool content.json
-Get-ChildItem assets/json/*.json | ForEach-Object { python -m json.tool $_.FullName }
-python -m json.tool i18n/default.json
-```
-
-If PowerShell is used with the actual repository path, use Windows backslashes. On Linux or Git Bash:
+After changing JSON or runtime files, run:
 
 ```bash
-python3 -m json.tool manifest.json >/dev/null
-python3 -m json.tool content.json >/dev/null
-find assets i18n -name '*.json' -print0 | xargs -0 -n1 python3 -m json.tool >/dev/null
+./scripts/validate.sh
 ```
 
-Package on a system with `zip`:
+The script validates every JSON file under `assets/` and `i18n/`, plus `manifest.json` and `content.json`.
+
+Build the release archive separately with:
 
 ```bash
 ./scripts/package.sh
@@ -119,4 +110,9 @@ Before release, also:
 - Confirm the intended IDs, names, prices, crop phases, harvest behavior, sprites, shops, recipes, and gift tastes in-game.
 - Do not commit `config.json`, `dist/`, or release ZIPs; they are generated and ignored.
 
-The GitHub Actions workflow packages through `scripts/package.sh` on Ubuntu. CI validates packaging and archive creation, not in-game behavior.
+GitHub Actions runs `scripts/validate.sh` on pushes and pull requests.
+Packaging runs only for pull requests and `v*` tags:
+
+- Pull requests produce beta artifacts.
+- Version tags produce release-candidate artifacts.
+- Nexus deployment is a separate production-only publishing step and is not configured in this repository yet.
