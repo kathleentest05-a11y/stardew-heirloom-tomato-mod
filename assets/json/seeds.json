@@ -1,4 +1,106 @@
 {
   "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_SanMarzanoTomato_Seed": {
+          "Name": "San Marzano Tomato Seeds",
+          "DisplayName": "{{i18n: SanMarzanoTomato_Seed.name}}",
+          "Description": "{{i18n: SanMarzanoTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 20,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_AmishPasteTomato_Seed": {
+          "Name": "Amish Paste Tomato Seeds",
+          "DisplayName": "{{i18n: AmishPasteTomato_Seed.name}}",
+          "Description": "{{i18n: AmishPasteTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 30,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_MortgageLifterTomato_Seed": {
+          "Name": "Mortgage Lifter Tomato Seeds",
+          "DisplayName": "{{i18n: MortgageLifterTomato_Seed.name}}",
+          "Description": "{{i18n: MortgageLifterTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 50,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_BlackKrimTomato_Seed": {
+          "Name": "Black Krim Tomato Seeds",
+          "DisplayName": "{{i18n: BlackKrimTomato_Seed.name}}",
+          "Description": "{{i18n: BlackKrimTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 35,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_PineappleTomato_Seed": {
+          "Name": "Pineapple Tomato Seeds",
+          "DisplayName": "{{i18n: PineappleTomato_Seed.name}}",
+          "Description": "{{i18n: PineappleTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 40,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        },
+        "{{ModId}}_GreenZebraTomato_Seed": {
+          "Name": "Green Zebra Tomato Seeds",
+          "DisplayName": "{{i18n: GreenZebraTomato_Seed.name}}",
+          "Description": "{{i18n: GreenZebraTomato_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 45,
+          "Edibility": -300,
+          "ContextTags": [
+            "heirloom_tomato_seed"
+          ]
+        }
+      },
+      "{{ModId}}_SungoldTomato_Seed": {
+        "Name": "Sungold Tomato Seeds",
+        "DisplayName": "{{i18n: SungoldTomato_Seed.name}}",
+        "Description": "{{i18n: SungoldTomato_Seed.description}}",
+        "Type": "Seeds",
+        "Category": -74,
+        "Price": 25,
+        "Edibility": -300,
+        "ContextTags": [
+          "heirloom_tomato_seed"
+        ]
+      },
+      "{{ModId}}_PeacevineTomato_Seed": {
+        "Name": "Peacevine Tomato Seeds",
+        "DisplayName": "{{i18n: PeacevineTomato_Seed.name}}",
+        "Description": "{{i18n: PeacevineTomato_Seed.description}}",
+        "Type": "Seeds",
+        "Category": -74,
+        "Price": 55,
+        "Edibility": -300,
+        "ContextTags": [
+          "heirloom_tomato_seed"
+        ]
+      }
+    }
   ]
 }

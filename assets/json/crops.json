@@ -1,4 +1,68 @@
 {
   "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Crops",
+      "Entries": {
+        "{{ModId}}_SanMarzanoTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_SanMarzanoTomato",
+          "RegrowDays": 5,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 3,
+          "DaysInPhase": [2, 2, 2, 3, 3]
+        },
+        "{{ModId}}_AmishPasteTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_AmishPasteTomato",
+          "RegrowDays": 5,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 3,
+          "DaysInPhase": [2, 2, 2, 3, 3]
+        },
+        "{{ModId}}_MortgageLifterTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_MortgageLifterTomato",
+          "RegrowDays": 5,
+          "DaysInPhase": [2, 2, 2, 3, 3]
+        },
+        "{{ModId}}_BlackKrimTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_BlackKrimTomato",
+          "RegrowDays": 5,
+          "DaysInPhase": [2, 2, 2, 3, 3]
+        },
+        "{{ModId}}_PineappleTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_PineappleTomato",
+          "RegrowDays": 5,
+          "DaysInPhase": [2, 2, 2, 3, 3]
+        },
+        "{{ModId}}_SungoldTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_SungoldTomato",
+          "RegrowDays": 3,
+          "HarvestMinStack": 2,
+          "HarvestMaxStack": 4,
+          "DaysInPhase": [1, 2, 2, 2, 2]
+        },
+        "{{ModId}}_PeacevineTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_PeacevineTomato",
+          "RegrowDays": 3,
+          "HarvestMinStack": 2,
+          "HarvestMaxStack": 4,
+          "DaysInPhase": [2, 2, 2, 2, 3]
+        },
+        "{{ModId}}_GreenZebraTomato_Seed": {
+          "Seasons": ["summer"],
+          "HarvestItemId": "{{ModId}}_GreenZebraTomato",
+          "RegrowDays": 5,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 3,
+          "DaysInPhase": [2, 2, 2, 2, 3]
+        }
+      }
+    }
   ]
 }
