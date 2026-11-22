@@ -1,0 +1,134 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_SanMarzanoTomato": {
+          "Name": "San Marzano Tomato",
+          "DisplayName": "{{i18n: SanMarzanoTomato.name}}",
+          "Description": "{{i18n: SanMarzanoTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 70,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 0,
+          "Edibility": 7,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_paste"
+          ]
+        },
+        "{{ModId}}_AmishPasteTomato": {
+          "Name": "Amish Paste Tomato",
+          "DisplayName": "{{i18n: AmishPasteTomato.name}}",
+          "Description": "{{i18n: AmishPasteTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 105,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 1,
+          "Edibility": 11,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_paste"
+          ]
+        },
+        "{{ModId}}_MortgageLifterTomato": {
+          "Name": "Mortgage Lifter Tomato",
+          "DisplayName": "{{i18n: MortgageLifterTomato.name}}",
+          "Description": "{{i18n: MortgageLifterTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 170,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 2,
+          "Edibility": 18,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_slicer",
+            "heirloom_tomato_beefsteak"
+          ]
+        },
+        "{{ModId}}_BlackKrimTomato": {
+          "Name": "Black Krim Tomato",
+          "DisplayName": "{{i18n: BlackKrimTomato.name}}",
+          "Description": "{{i18n: BlackKrimTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 120,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 3,
+          "Edibility": 12,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_slicer",
+            "heirloom_tomato_beefsteak"
+          ]
+        },
+        "{{ModId}}_PineappleTomato": {
+          "Name": "Pineapple Tomato",
+          "DisplayName": "{{i18n: PineappleTomato.name}}",
+          "Description": "{{i18n: PineappleTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 130,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 4,
+          "Edibility": 13,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_slicer",
+            "heirloom_tomato_beefsteak"
+          ]
+        },
+        "{{ModId}}_SungoldTomato": {
+          "Name": "Sungold Tomato",
+          "DisplayName": "{{i18n: SungoldTomato.name}}",
+          "Description": "{{i18n: SungoldTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 20,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 5,
+          "Edibility": 3,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_cherry"
+          ]
+        },
+        "{{ModId}}_PeacevineTomato": {
+          "Name": "Peacevine Tomato",
+          "DisplayName": "{{i18n: PeacevineTomato.name}}",
+          "Description": "{{i18n: PeacevineTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 30,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 6,
+          "Edibility": 3,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_cherry"
+          ]
+        },
+        "{{ModId}}_GreenZebraTomato": {
+          "Name": "Green Zebra Tomato",
+          "DisplayName": "{{i18n: GreenZebraTomato.name}}",
+          "Description": "{{i18n: GreenZebraTomato.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 65,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 7,
+          "Edibility": 7,
+          "ContextTags": [
+            "heirloom_tomato",
+            "heirloom_tomato_slicer",
+            "heirloom_tomato_saladette"
+          ]
+        }
+      }
+    }
+  ]
+}
