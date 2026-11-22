@@ -58,6 +58,40 @@ This repository root is the content pack folder itself.
 For a Nexus release, zip the pack so the zip contains the
 `[CP] Heirloom Tomatoes` folder (not loose files at the zip root).
 
+### Install a prerelease copy on Windows
+
+From the repository root, copy only the runtime files into a separate
+prerelease folder in the game's `Mods` directory. The scripts default to
+`C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods`:
+
+```powershell
+.\scripts\install-prerelease.ps1
+```
+
+For a different game install location, pass its `Mods` path with
+`-ModsPath "C:\path\to\Stardew Valley\Mods"`.
+
+Before launching the game, move the production `[CP] Heirloom Tomatoes`
+folder out of `Mods` (or otherwise disable it). Both folders use the same
+mod `UniqueID`, so keeping both enabled can cause a duplicate-mod conflict;
+the different folder name does not make them separate mods.
+
+The script creates `[CP] Heirloom Tomatoes PRERELEASE` and copies
+`manifest.json`, `content.json`, `assets/`, and `i18n/`. It does not copy
+documentation or development files. Re-running it replaces the existing
+prerelease folder contents. If the default Mods folder isn't found, pass
+the path with `-ModsPath`.
+
+To remove the prerelease copy, run:
+
+```powershell
+.\scripts\uninstall-prerelease.ps1
+```
+
+For a non-default game install, pass the same `-ModsPath` override. The
+script asks for confirmation before deleting only the prerelease folder.
+Use `-WhatIf` to preview the action.
+
 ## Project layout
 
 | Path | Purpose |
