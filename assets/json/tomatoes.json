@@ -127,6 +127,17 @@
             "heirloom_tomato_slicer",
             "heirloom_tomato_saladette"
           ]
+        },
+        "{{ModId}}_Basil": {
+          "Name": "Basil",
+          "DisplayName": "{{i18n: Basil.name}}",
+          "Description": "{{i18n: Basil.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 30,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 16,
+          "Edibility": 4
         }
       }
     }

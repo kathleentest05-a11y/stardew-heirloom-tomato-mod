@@ -413,8 +413,10 @@ is not pursued).
 Verified starting facts: vanilla Stardew Valley 1.6 has 81 cooking recipes
 and **no Caprese of any kind** — the nearest tomato dishes are Bruschetta
 (Bread + Oil + Tomato), Vegetable Medley, and Salad. The name is therefore
-free in vanilla, but at least one Cornucopia-adjacent recipe mod already
-ships a "Caprese Salad", so this mod's dish is named **Heirloom Caprese**
+free in vanilla, but the Cornucopia family ships a "Caprese Salad"
+(author, 2026-11-22; not in More Crops 1.7.0, which has no cooking
+recipes — expected in Cornucopia's cooking add-on, not yet read), so
+this mod's dish is named **Heirloom Caprese**
 to stay distinguishable when both are installed. Its item/recipe IDs use
 the mod prefix (§7) regardless of display name.
 
@@ -484,7 +486,9 @@ Caprese recipe to Cornucopia's basil.**
   nobody), `Data/Crops`, sprites, i18n, and seeds at Pierre's. It is a
   generic sweet/Genovese-style basil — §3's generic-name evidence applies
   in brief (basil variety names are not exempt just because basil is a
-  side crop). Season **Summer** alongside the tomatoes, maturing no later
+  side crop). Seasons **Spring, Summer, and Fall** (author decision
+  2026-11-22, replacing Summer-only: real basil is finicky in summer heat,
+  and a longer window makes it a dependable pantry herb), maturing no later
   than the earliest beefsteak harvest and regrowing, so a Year-1 player can
   cook Caprese the same Summer they unlock it. Its exact days, regrow, and
   seed/sell prices (cheap herb band, cf. Cornucopia's 30g) are fixed when
@@ -742,7 +746,7 @@ Sprite / crop-texture notes (distinguishing traits, §7):
 | Season | Summer for all varieties (§4.2) |
 | Raw-fruit gifting | Vanilla tomato baseline; 100g+ Loved by Leah/Maru/Demetrius, plus Gus for 100g+ beefsteak/slicing or paste only (§7.2) |
 | Starter recipe | Heirloom Caprese after variety list: Cheese + Basil + vanilla Vinegar (no balsamic item) + any beefsteak/slicing tomato from this mod (lean decision, author 2026-11-21 — includes Green Zebra as saladette slicer, never relabelled beefsteak; no separate saladette/onion recipe); Gus 3-heart mail; Loved by Leah + Gus + Lewis, Lewis cooked-only (§7.3) |
-| Basil | Own Summer basil crop + `BasilSource` config (`Auto`/`Ours`/`Cornucopia`) swapping Caprese to Cornucopia basil when installed (§7.4) |
+| Basil | Own Spring–Fall basil crop (author, 2026-11-22) + `BasilSource` config (`Auto`/`Ours`/`Cornucopia`) swapping Caprese to Cornucopia basil when installed (§7.4) |
 | Second recipe | Heirloom Cherry Salad after variety list: Oil + Vinegar + Kale (no arugula) + any cherry heirloom ×2; Harvey 3-heart mail; Loved by Leah + Harvey (§7.5) |
 | Sungold | First §3.4 selective-hybrid candidate — in under its own name if the full legal gate passes; labelled modern F1, never heirloom (§3.4, §7.5) |
 | Hybrids in general | Selective only: benchmark-unique, legally clean, one per fruit type, individually approved (§3.4) |

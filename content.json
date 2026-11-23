@@ -1,5 +1,36 @@
 {
   "Format": "2.9.0",
+  "ConfigSchema": {
+    "BasilSource": {
+      "AllowValues": "Auto, Ours, Cornucopia",
+      "Default": "Auto"
+    }
+  },
+  "DynamicTokens": [
+    {
+      "Name": "ActiveBasil",
+      "Value": "Ours"
+    },
+    {
+      "Name": "ActiveBasil",
+      "Value": "Cornucopia",
+      "When": {
+        "HasMod": "Cornucopia.MoreCrops",
+        "BasilSource": "Auto, Cornucopia"
+      }
+    },
+    {
+      "Name": "BasilItemId",
+      "Value": "{{ModId}}_Basil"
+    },
+    {
+      "Name": "BasilItemId",
+      "Value": "Cornucopia_Basil",
+      "When": {
+        "ActiveBasil": "Cornucopia"
+      }
+    }
+  ],
   "Changes": [
     {
       "LogName": "Heirloom tomato object sprites (placeholder art)",
@@ -14,7 +45,7 @@
       "FromFile": "assets/sprites/crops.png"
     },
     {
-      "LogName": "Heirloom tomato vegetables (fruit objects only; crops/seeds/shops/recipes/gift tastes not yet added)",
+      "LogName": "Heirloom tomato and basil harvest objects",
       "Action": "Include",
       "FromFile": "assets/json/tomatoes.json"
     },
