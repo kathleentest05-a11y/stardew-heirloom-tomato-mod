@@ -1507,7 +1507,9 @@ Outstanding:
   - (3) Cornucopia on, `Ours`: our basil seeds appear at Pierre's after
     switching in GMCM mid-session (no restart) — pass. GMCM labels from
     i18n display correctly.
-  - (4) `Cornucopia` selected, Cornucopia absent: not yet run.
+  - (4) `Cornucopia` selected, Cornucopia disabled in Vortex: falls back
+    to ours; our basil seeds at Pierre's — pass. No crash with leftover
+    Cornucopia forage on the farm.
   Recipe side of all four waits on Heirloom Caprese.
 - Gift tastes (Vegetable baseline, Loved by nobody, §7.2).
 - In-game check of growth frames, regrow, and prices.
