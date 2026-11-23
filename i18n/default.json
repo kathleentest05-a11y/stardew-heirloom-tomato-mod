@@ -30,5 +30,14 @@
   "GreenZebraTomato_Seed.name": "Green Zebra Tomato Seeds",
   "GreenZebraTomato_Seed.description": "Plant in summer. Takes 11 days to mature, and produces small round green-gold tomatoes with dark stripes. Tangy in wedges.",
   "GreenZebraTomato.name": "Green Zebra",
-  "GreenZebraTomato.description": "A modern open-pollinated salad tomato. Green-gold with dark stripes, tangy in wedges."
+  "GreenZebraTomato.description": "A modern open-pollinated salad tomato. Green-gold with dark stripes, tangy in wedges.",
+  "Basil.name": "Basil",
+  "Basil.description": "Sweet, fragrant green leaves. A fresh sprig belongs with ripe tomatoes.",
+  "Basil_Seed.name": "Basil Seeds",
+  "Basil_Seed.description": "Plant in spring, summer, or fall. Takes 7 days to mature, then grows fresh leaves every 3 days.",
+  "config.BasilSource.name": "Basil source",
+  "config.BasilSource.description": "Which basil Heirloom Caprese uses. Auto uses Cornucopia's basil when Cornucopia - More Crops is installed, otherwise this mod's basil. Our basil plants and leaves stay valid whichever you pick.",
+  "config.BasilSource.values.Auto": "Auto",
+  "config.BasilSource.values.Ours": "This mod's basil",
+  "config.BasilSource.values.Cornucopia": "Cornucopia's basil (if installed)"
 }

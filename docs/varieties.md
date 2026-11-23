@@ -1445,6 +1445,75 @@ USPTO search backend + TSDR Serial 97037765, USDA POD API.
 
 ---
 
+## Basil (supporting crop, requirements §7.4)
+
+Not a tomato variety; the §§3–5 tomato formulas do not apply. Generic
+sweet/Genovese-style basil, named plainly "Basil" (generic common
+name — no variety name used).
+
+**Status: provisional, implemented 2026-11-22.** Numbers below are
+first-pass values in the cheap-herb band, pending an in-game check.
+
+| Field | Value | Note |
+|---|---|---|
+| IDs | `{{ModId}}_Basil`, `{{ModId}}_Basil_Seed` | stable once released |
+| Seasons | Spring, Summer, Fall | author decision 2026-11-22 (was Summer-only) |
+| Growth | `DaysInPhase` [1, 1, 1, 2, 2] = 7 days | ≤ earliest beefsteak (12 days), per §7.4 |
+| Regrow | 3 days, 1 bunch per harvest | |
+| Sell price | 30g | cf. Cornucopia basil ~30g |
+| Seed price | 40g at Pierre's (object `Price` 20 = sell-back) | |
+| Sprites | object 16 (leaves), 17 (packet); crop `SpriteIndex` 8 | draft art |
+
+Rough yield check (no fertilizer/quality): one Summer from day 1 gives
+harvests on days 8, 11, …, 26 → 7 × 30g = 210g per plant, versus about
+300g for vanilla Tomato (60g, 11 days, regrow 4). Planted Spring 1 and
+kept through Fall, about 26 harvests ≈ 780g on one 40g seed — in line
+with other multi-season regrowers (coffee) but worth watching in play.
+
+**Cornucopia identifiers (read from the installed mod, Cornucopia – More
+Crops 1.7.0, 2026-11-22):**
+
+- `UniqueID`: `Cornucopia.MoreCrops` (for `HasMod`). Requires
+  `furyx639.CustomBush` and `spacechase0.SpaceCore`.
+- Basil item: `Cornucopia_Basil`, Category -75 with "Herb" category text,
+  30g, Edibility 8, tags include `basil_item` and `herb_item`.
+- Basil seed: `Cornucopia_BasilSeeds`, Spring only, `DaysInPhase`
+  [1, 1, 1] (3 days), no regrow. Sold at Pierre's (`SeedShop`) through
+  a context-tag `ALL_ITEMS` entry, so hiding it is not needed; we only
+  hide ours.
+- Gift tastes: Cornucopia makes `Cornucopia_Basil` **Loved by Gus** and
+  adds `herb_item` to Gus's Liked list. Ours is Loved by nobody (§7.2),
+  so with `Auto` the Caprese basil Gus receives as a raw gift differs
+  between setups. Record a decision before the gift-taste pass.
+- Pack toggles: `Cornucopia_Basil` and its seed are in the always-on
+  Essential pack (the object patch has no `When`; the Essential toggle is
+  commented out in their data). The "Enable Herbs Pack" option does not
+  affect basil. So `HasMod` alone is enough to tell whether Cornucopia's
+  basil exists, and §7.4 case 4 must be tested by uninstalling or
+  disabling the mod, not by switching a pack off.
+- More Crops has no cooking recipes and no Caprese; the "Caprese Salad"
+  name clash (§7.3) comes from elsewhere in the Cornucopia family.
+
+Outstanding:
+- `BasilSource` config: implemented 2026-11-22 for the shop side (our
+  basil seeds are hidden when `ActiveBasil` = Cornucopia). The recipe
+  side waits on Heirloom Caprese, which will take its basil from the
+  `{{BasilItemId}}` token. §7.4 test matrix, shop side (in-game,
+  2026-11-22, Summer save, Cornucopia – More Crops 1.7.0):
+  - (1) This mod alone: all tomato seeds and our basil seeds at Pierre's — pass.
+  - (2) Cornucopia on, `Auto`: tomato seeds present, our basil seeds
+    hidden; no basil at all in Summer (Cornucopia basil is Spring-only),
+    as expected — pass. Seed prices correct with Cornucopia on.
+  - (3) Cornucopia on, `Ours`: our basil seeds appear at Pierre's after
+    switching in GMCM mid-session (no restart) — pass. GMCM labels from
+    i18n display correctly.
+  - (4) `Cornucopia` selected, Cornucopia absent: not yet run.
+  Recipe side of all four waits on Heirloom Caprese.
+- Gift tastes (Vegetable baseline, Loved by nobody, §7.2).
+- In-game check of growth frames, regrow, and prices.
+
+---
+
 ## Assessment: keep, trim, add
 
 ### Is the list enough?

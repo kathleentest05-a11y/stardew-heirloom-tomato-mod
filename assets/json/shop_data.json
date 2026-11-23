@@ -1,10 +1,77 @@
 {
   "Changes": [
     {
+      "LogName": "Heirloom tomato seeds at Pierre's (SeedShop), Summer only",
       "Action": "EditData",
       "Target": "Data/Shops",
-      "TargetField": ["GeneralStore", "Items"],
-      "Entries": {}
+      "TargetField": ["SeedShop", "Items"],
+      "Entries": {
+        "{{ModId}}_SanMarzanoTomato_Seed": {
+          "Id": "{{ModId}}_SanMarzanoTomato_Seed",
+          "ItemId": "(O){{ModId}}_SanMarzanoTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_AmishPasteTomato_Seed": {
+          "Id": "{{ModId}}_AmishPasteTomato_Seed",
+          "ItemId": "(O){{ModId}}_AmishPasteTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_MortgageLifterTomato_Seed": {
+          "Id": "{{ModId}}_MortgageLifterTomato_Seed",
+          "ItemId": "(O){{ModId}}_MortgageLifterTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_BlackKrimTomato_Seed": {
+          "Id": "{{ModId}}_BlackKrimTomato_Seed",
+          "ItemId": "(O){{ModId}}_BlackKrimTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_PineappleTomato_Seed": {
+          "Id": "{{ModId}}_PineappleTomato_Seed",
+          "ItemId": "(O){{ModId}}_PineappleTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_SungoldTomato_Seed": {
+          "Id": "{{ModId}}_SungoldTomato_Seed",
+          "ItemId": "(O){{ModId}}_SungoldTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_PeacevineTomato_Seed": {
+          "Id": "{{ModId}}_PeacevineTomato_Seed",
+          "ItemId": "(O){{ModId}}_PeacevineTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}_GreenZebraTomato_Seed": {
+          "Id": "{{ModId}}_GreenZebraTomato_Seed",
+          "ItemId": "(O){{ModId}}_GreenZebraTomato_Seed",
+          "Condition": "SEASON summer",
+          "IgnoreShopPriceModifiers": true
+        }
+      }
+    },
+    {
+      "LogName": "Basil seeds at Pierre's (SeedShop), Spring-Fall; hidden while Cornucopia basil is active (BasilSource)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop", "Items"],
+      "When": {
+        "ActiveBasil": "Ours"
+      },
+      "Entries": {
+        "{{ModId}}_Basil_Seed": {
+          "Id": "{{ModId}}_Basil_Seed",
+          "ItemId": "(O){{ModId}}_Basil_Seed",
+          "Condition": "SEASON spring summer fall",
+          "IgnoreShopPriceModifiers": true
+        }
+      }
     }
   ]
 }

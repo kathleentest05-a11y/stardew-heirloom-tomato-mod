@@ -115,6 +115,17 @@
           "ContextTags": [
             "heirloom_tomato_seed"
           ]
+        },
+        "{{ModId}}_Basil_Seed": {
+          "Name": "Basil Seeds",
+          "DisplayName": "{{i18n: Basil_Seed.name}}",
+          "Description": "{{i18n: Basil_Seed.description}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Price": 20,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 17,
+          "Edibility": -300
         }
       }
     }

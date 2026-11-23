@@ -97,7 +97,7 @@ Use `-WhatIf` to preview the action.
 | --- | --- |
 | `manifest.json` | SMAPI mod identity. `ContentPackFor` marks this as a Content Patcher pack. |
 | `content.json` | Content Patcher patches (`Format`, `Changes`). Loads the placeholder object and draft crop spritesheets and includes the fruit, seed, crop, shop, recipe, and gift-taste data. |
-| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in fruit-entry order) and seed packets (8–15, same order). `assets/sprites/crops.png` holds draft crop growth sprites (256×128; crop `SpriteIndex` 0–7 in the same variety order, two crops per row). |
+| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in fruit-entry order) and seed packets (8–15, same order), then basil leaves (16) and basil seed packet (17) on a second row. `assets/sprites/crops.png` holds draft crop growth sprites (256×160; crop `SpriteIndex` 0–7 in the same variety order, then basil = 8; two crops per row). |
 | `i18n/default.json` | Default (English) translatable strings, referenced as `{{i18n:key}}`. |
 | `docs/requirements.md` | Requirements: variety vetting, DTM conversion, pricing, and balance rules. |
 | `docs/gift-tastes-tomatoes.md` | Research: vanilla gift tastes for raw tomato and all tomato dishes. |
@@ -114,7 +114,7 @@ patches to:
   edibility, category, and fruit sprite data).
 - `Data/Crops` — seasons, growth phases, regrow, harvest item, trellis, etc.
   The entry key is the seed item's ID.
-- `Data/Shops` — provisional seed availability (e.g. at Pierre's).
+- `Data/Shops` — all eight seed packets at Pierre's (`SeedShop`), Summer only, no friendship gate (§5.2); basil seeds Spring–Fall (§7.4).
 - Sprites — fruit and seed sprites are loaded from the placeholder object
   spritesheet; crop growth sprites from the draft crop spritesheet
   (`Mods/{{ModId}}/Crops`).

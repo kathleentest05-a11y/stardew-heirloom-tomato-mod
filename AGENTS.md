@@ -46,7 +46,9 @@ The repository contains provisional data for eight locked v1 varieties. Treat it
 
 - Fruit objects and a placeholder 16x16 fruit spritesheet currently exist.
 - Seed objects now have placeholder 16x16 seed packet art in `assets/sprites/objects.png` (indices 8–15); crop entries use draft growth-stage art in `assets/sprites/crops.png` (`SpriteIndex` 0–7).
-- Shop, recipe, and gift-taste files are placeholders and not implemented.
+- The §7.4 supporting basil crop exists (provisional numbers and art): leaves at object index 16, seed packet 17, crop `SpriteIndex` 8; grows Spring/Summer/Fall. The `BasilSource` config (`Auto`/`Ours`/`Cornucopia`, in `content.json`) sets dynamic tokens `ActiveBasil` and `BasilItemId`; today it only hides our basil seeds when Cornucopia's basil is active (`Cornucopia.MoreCrops` installed). The Caprese recipe will use `{{BasilItemId}}`.
+- Seeds for all eight varieties are sold at Pierre's (`Data/Shops` key `SeedShop`) in Summer (basil seeds Spring–Fall) (`assets/json/shop_data.json`), priced from the seed object `Price` (shop price = 2× sell-back, per §5.2). Entries set `IgnoreShopPriceModifiers: true` because `SeedShop` otherwise doubles prices again (seen in-game 2026-11-22: 4× instead of 2×). Verified in-game after the fix 2026-11-22 (San Marzano 40g).
+- Recipe and gift-taste files are placeholders and not implemented. Their empty patches and `content.json` includes are intentional scaffolding (author decision); SMAPI warns about them harmlessly. Leave them in place and fill them when those systems are built.
 - No variety is considered fully approved until its `docs/requirements.md` §9 checklist is complete.
 
 Do not describe Peacevine or Green Zebra as heirlooms, and never describe Sungold as heirloom, heritage, or open-pollinated. Sungold is a modern F1 hybrid. Record modern-bred status honestly.
@@ -69,8 +71,8 @@ When `docs/varieties.md` marks a search or checklist item outstanding, leave the
 ## Art and asset conventions
 
 - Preserve 16x16 object sprite sizing and use a whole-pixel placement.
-- `assets/sprites/objects.png` indices are ordered 0–7 in the fruit-entry order, then 8–15 for the matching seed packets in that same variety order (e.g. San Marzano fruit = 0, San Marzano seed packet = 8).
-- `assets/sprites/crops.png` (loaded as `Mods/{{ModId}}/Crops`) follows the vanilla crop-sheet layout: 256 px wide, each crop an 8-frame row of 16x32 sprites, two crops per sheet row (crop `SpriteIndex` i → x = (i % 2) × 128, y = (i ÷ 2) × 32), in the same variety order as the fruit. Frames: 0–1 seed variants, 2–5 growth phases, 6 harvest-ready, 7 regrowing after harvest.
+- `assets/sprites/objects.png` indices are ordered 0–7 in the fruit-entry order, then 8–15 for the matching seed packets in that same variety order (e.g. San Marzano fruit = 0, San Marzano seed packet = 8). The sheet is 256x32: the second row holds supporting crops, starting with basil leaves = 16 and basil seed packet = 17.
+- `assets/sprites/crops.png` (loaded as `Mods/{{ModId}}/Crops`) follows the vanilla crop-sheet layout: 256 px wide, each crop an 8-frame row of 16x32 sprites, two crops per sheet row (crop `SpriteIndex` i → x = (i % 2) × 128, y = (i ÷ 2) × 32), in the same variety order as the fruit, then supporting crops (basil = 8, at y = 128; sheet now 256x160). Frames: 0–1 seed variants, 2–5 growth phases, 6 harvest-ready, 7 regrowing after harvest.
 - If the spritesheet changes, verify every `SpriteIndex` and update the documentation.
 - Future crop textures must be mod-owned assets referenced explicitly; do not patch vanilla crop tilesheets unless the requirement and test context explicitly calls for it.
 - Distinguish varieties visibly by shape and pattern, not by color alone.

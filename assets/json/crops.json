@@ -78,6 +78,14 @@
           "HarvestMinStack": 1,
           "HarvestMaxStack": 3,
           "DaysInPhase": [2, 2, 2, 2, 3]
+        },
+        "{{ModId}}_Basil_Seed": {
+          "Seasons": ["spring", "summer", "fall"],
+          "HarvestItemId": "{{ModId}}_Basil",
+          "Texture": "Mods/{{ModId}}/Crops",
+          "SpriteIndex": 8,
+          "RegrowDays": 3,
+          "DaysInPhase": [1, 1, 1, 2, 2]
         }
       }
     }
