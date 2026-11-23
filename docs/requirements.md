@@ -466,6 +466,43 @@ Requirements:
   i18n like everything else. (If recipe-mail proves awkward in Content
   Patcher, the Stardrop Saloon shop is the acceptable fallback — record
   which shipped.)
+- **Implementation record (author decision 2026-11-22; prototype test
+  passed in-game the same day):**
+  - *Mechanism:* vanilla 1.6 recipe ingredients are matched only by
+    "unqualified item ID or category number" (game code docs,
+    `CraftingRecipe.recipeList`), so vanilla cannot express "any slicing
+    tomato" without duplicate recipes (A) or a custom category that
+    would strip the Vegetable category (B). Shipped instead: **SpaceCore
+    as a required dependency** (1.28.4+), using its Content
+    Patcher-editable `spacechase0.SpaceCore/CookingRecipeOverrides` asset
+    with a `ContextTag` ingredient on `heirloom_tomato_slicer`. That tag
+    is on Mortgage Lifter, Black Krim, Pineapple, and Green Zebra only.
+    One recipe, one cookbook entry. The vanilla `Data/CookingRecipes`
+    entry stays for unlock, name, and listing; its own ingredient list
+    (Mortgage Lifter as a stand-in) is replaced by SpaceCore.
+  - *Unlock:* the vanilla `f Gus 3` condition, which mails the recipe
+    the day after reaching 3 hearts — verified in-game 2026-11-22. The
+    game reuses Gus's standard recipe letter (the same one that brings
+    Salmon Dinner): Saloon-chef voice, but not tomato-specific. **Author
+    decision 2026-11-22: keep the vanilla letter**; no custom mail or
+    trigger action. This relaxes "sharing a way to show off a slicing
+    tomato" above for v1.
+  - *Basil:* the ingredient uses the `{{BasilItemId}}` token (§7.4).
+  - *Numbers:* sell 280g; Edibility 60 (150 energy); no buff.
+    Ingredients (Cheese 230 + Basil 30 + Vinegar 200 purchased +
+    slicer 65–170) total about 525–630g. So the dish sells below its
+    inputs, as vanilla salads do, and above Bruschetta (210g). Energy
+    sits between Salad (113) and Radish Salad (200).
+  - *Prototype test (in-game 2026-11-22, SpaceCore 1.28.4, our basil
+    via `BasilSource` fallback):* exactly one cookbook entry; the tomato
+    slot shows "Slicing Heirloom Tomato (any)" with the Mortgage Lifter
+    icon. Mortgage Lifter, Black Krim, Pineapple, and Green Zebra each
+    cook it — pass. San Marzano (paste), Sungold (cherry), and vanilla
+    Tomato are refused even with Cheese, basil, and Vinegar present —
+    pass. Dish sprite and description display correctly. Sells for
+    280g (sold to Pierre) — pass. Not yet checked: Amish Paste/Peacevine
+    refusal (same tags as tested ones) and the recipe with Cornucopia's
+    basil.
 - **Caprese gift tastes:** moved to
   [`docs/gift-tastes-tomatoes.md`](gift-tastes-tomatoes.md) Part II
   (summary: universal cooking Liked; Loved by Leah, Gus, and Lewis only).

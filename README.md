@@ -14,8 +14,12 @@ Adds several heirloom tomato varieties to Stardew Valley using Content Patcher.
 - Stardew Valley 1.6 or later
 - [SMAPI](https://www.nexusmods.com/stardewvalley/mods/2400) 4.0.0 or later
 - [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915) 2.9.0 or later
+- [SpaceCore](https://www.nexusmods.com/stardewvalley/mods/1348) 1.28.4 or later
 
-No other framework is needed. In particular, this mod does **not** use
+SpaceCore is used only through its Content Patcher-editable recipe data,
+so Heirloom Caprese can take "any slicing heirloom tomato" as one
+ingredient (vanilla recipes only accept fixed item IDs or categories).
+This mod has no C# code and does **not** use
 PPJA, Json Assets, or Producer Framework Mod — Stardew Valley 1.6 can add
 custom objects and crops natively (see "How it works" below).
 
@@ -23,7 +27,7 @@ custom objects and crops natively (see "How it works" below).
 
 This repository root is the content pack folder itself.
 
-1. Install SMAPI and Content Patcher.
+1. Install SMAPI, Content Patcher, and SpaceCore.
 2. Copy (or symlink) this folder into your game's `Mods` folder and rename
    the copy to `[CP] Heirloom Tomatoes` if needed:
 
@@ -97,7 +101,7 @@ Use `-WhatIf` to preview the action.
 | --- | --- |
 | `manifest.json` | SMAPI mod identity. `ContentPackFor` marks this as a Content Patcher pack. |
 | `content.json` | Content Patcher patches (`Format`, `Changes`). Loads the placeholder object and draft crop spritesheets and includes the fruit, seed, crop, shop, recipe, and gift-taste data. |
-| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in fruit-entry order) and seed packets (8–15, same order), then basil leaves (16) and basil seed packet (17) on a second row. `assets/sprites/crops.png` holds draft crop growth sprites (256×160; crop `SpriteIndex` 0–7 in the same variety order, then basil = 8; two crops per row). |
+| `assets/` | Sprites and JSON data referenced by `content.json`. `assets/sprites/objects.png` holds provisional 16×16 fruit sprites (indices 0–7, in fruit-entry order) and seed packets (8–15, same order), then basil leaves (16), basil seed packet (17), and Heirloom Caprese (18) on a second row. `assets/sprites/crops.png` holds draft crop growth sprites (256×160; crop `SpriteIndex` 0–7 in the same variety order, then basil = 8; two crops per row). |
 | `i18n/default.json` | Default (English) translatable strings, referenced as `{{i18n:key}}`. |
 | `docs/requirements.md` | Requirements: variety vetting, DTM conversion, pricing, and balance rules. |
 | `docs/gift-tastes-tomatoes.md` | Research: vanilla gift tastes for raw tomato and all tomato dishes. |

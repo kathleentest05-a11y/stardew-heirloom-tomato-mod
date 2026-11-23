@@ -1,9 +1,71 @@
 {
   "Changes": [
     {
+      "LogName": "Heirloom Caprese dish object",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HeirloomCaprese": {
+          "Name": "Heirloom Caprese",
+          "DisplayName": "{{i18n: HeirloomCaprese.name}}",
+          "Description": "{{i18n: HeirloomCaprese.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 280,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 18,
+          "Edibility": 60
+        }
+      }
+    },
+    {
+      "LogName": "Heirloom Caprese cooking recipe (Gus 3 hearts; ingredients overridden by SpaceCore below)",
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
-      "Entries": {}
+      "Entries": {
+        "{{ModId}}_HeirloomCaprese": "424 1 {{BasilItemId}} 1 419 1 {{ModId}}_MortgageLifterTomato 1/1 1/{{ModId}}_HeirloomCaprese/f Gus 3/{{i18n: HeirloomCaprese.name}}"
+      }
+    },
+    {
+      "LogName": "Heirloom Caprese ingredients via SpaceCore: Cheese + basil + Vinegar + any slicing heirloom tomato",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+      "Entries": {
+        "{{ModId}}_HeirloomCaprese": {
+          "ProductQualifiedId": "(O){{ModId}}_HeirloomCaprese",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(O)424",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O){{BasilItemId}}",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)419",
+              "Amount": 1
+            },
+            {
+              "Type": "ContextTag",
+              "Value": "heirloom_tomato_slicer",
+              "Amount": 1,
+              "OverrideText": "{{i18n: Ingredient.SlicingHeirloomTomato}}",
+              "OverrideTexturePath": "Mods/{{ModId}}/Objects",
+              "OverrideTextureRect": {
+                "X": 32,
+                "Y": 0,
+                "Width": 16,
+                "Height": 16
+              }
+            }
+          ]
+        }
+      }
     }
   ]
 }

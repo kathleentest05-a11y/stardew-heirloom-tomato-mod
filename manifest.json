@@ -15,6 +15,11 @@
       "UniqueID": "Pathoschild.ContentPatcher",
       "MinimumVersion": "2.9.0",
       "IsRequired": true
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "MinimumVersion": "1.28.4",
+      "IsRequired": true
     }
   ],
   "UpdateKeys": []

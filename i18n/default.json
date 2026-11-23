@@ -39,5 +39,8 @@
   "config.BasilSource.description": "Which basil Heirloom Caprese uses. Auto uses Cornucopia's basil when Cornucopia - More Crops is installed, otherwise this mod's basil. Our basil plants and leaves stay valid whichever you pick.",
   "config.BasilSource.values.Auto": "Auto",
   "config.BasilSource.values.Ours": "This mod's basil",
-  "config.BasilSource.values.Cornucopia": "Cornucopia's basil (if installed)"
+  "config.BasilSource.values.Cornucopia": "Cornucopia's basil (if installed)",
+  "HeirloomCaprese.name": "Heirloom Caprese",
+  "HeirloomCaprese.description": "Thick slices of heirloom tomato layered with fresh cheese and basil, finished with a balsamic-style dressing.",
+  "Ingredient.SlicingHeirloomTomato": "Slicing Heirloom Tomato (any)"
 }
