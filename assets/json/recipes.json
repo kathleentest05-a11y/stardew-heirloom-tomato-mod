@@ -1,7 +1,7 @@
 {
   "Changes": [
     {
-      "LogName": "Heirloom Caprese dish object",
+      "LogName": "Heirloom tomato dish objects (Caprese, Cherry Salad)",
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
@@ -15,19 +15,39 @@
           "Texture": "Mods/{{ModId}}/Objects",
           "SpriteIndex": 18,
           "Edibility": 60
+        },
+        "{{ModId}}_HeirloomCherrySalad": {
+          "Name": "Heirloom Cherry Salad",
+          "DisplayName": "{{i18n: HeirloomCherrySalad.name}}",
+          "Description": "{{i18n: HeirloomCherrySalad.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 320,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 19,
+          "Edibility": 70
         }
       }
     },
     {
-      "LogName": "Heirloom Caprese cooking recipe (Gus 3 hearts; ingredients overridden by SpaceCore below)",
+      "LogName": "Heirloom tomato cooking recipes (Caprese: Gus 3 hearts; Cherry Salad: Harvey 3 hearts; ingredients overridden by SpaceCore below)",
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "{{ModId}}_HeirloomCaprese": "424 1 {{BasilItemId}} 1 419 1 {{ModId}}_MortgageLifterTomato 1/1 1/{{ModId}}_HeirloomCaprese/f Gus 3/{{i18n: HeirloomCaprese.name}}"
+        "{{ModId}}_HeirloomCaprese": "424 1 {{BasilItemId}} 1 419 1 {{ModId}}_MortgageLifterTomato 1/1 1/{{ModId}}_HeirloomCaprese/f Gus 3/{{i18n: HeirloomCaprese.name}}",
+        "{{ModId}}_HeirloomCherrySalad": "247 1 419 1 250 1 {{ModId}}_PeacevineTomato 2/1 1/{{ModId}}_HeirloomCherrySalad/f Harvey 3/{{i18n: HeirloomCherrySalad.name}}"
       }
     },
     {
-      "LogName": "Heirloom Caprese ingredients via SpaceCore: Cheese + basil + Vinegar + any slicing heirloom tomato",
+      "LogName": "Harvey's friendship recipe letter (vanilla has no HarveyCooking mail; 'f Harvey N' recipes queue it)",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "HarveyCooking": "{{i18n: Mail.HarveyCooking.body}}%item cookingRecipe %%[#]{{i18n: Mail.HarveyCooking.title}}"
+      }
+    },
+    {
+      "LogName": "Heirloom tomato recipe ingredients via SpaceCore context tags (slicer for Caprese, cherry for Cherry Salad)",
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
       "Entries": {
@@ -58,6 +78,40 @@
               "OverrideTexturePath": "Mods/{{ModId}}/Objects",
               "OverrideTextureRect": {
                 "X": 32,
+                "Y": 0,
+                "Width": 16,
+                "Height": 16
+              }
+            }
+          ]
+        },
+        "{{ModId}}_HeirloomCherrySalad": {
+          "ProductQualifiedId": "(O){{ModId}}_HeirloomCherrySalad",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "Item",
+              "Value": "(O)247",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)419",
+              "Amount": 1
+            },
+            {
+              "Type": "Item",
+              "Value": "(O)250",
+              "Amount": 1
+            },
+            {
+              "Type": "ContextTag",
+              "Value": "heirloom_tomato_cherry",
+              "Amount": 2,
+              "OverrideText": "{{i18n: Ingredient.CherryHeirloomTomato}}",
+              "OverrideTexturePath": "Mods/{{ModId}}/Objects",
+              "OverrideTextureRect": {
+                "X": 96,
                 "Y": 0,
                 "Width": 16,
                 "Height": 16

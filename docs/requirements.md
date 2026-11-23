@@ -614,6 +614,27 @@ Requirements:
 - **Gift tastes:** moved to
   [`docs/gift-tastes-tomatoes.md`](gift-tastes-tomatoes.md) Part II
   (summary: universal cooking Liked; Loved by Leah and Harvey only).
+- **Implementation record (2026-11-22, in-game test passed 2026-11-22):**
+  - *Mechanism:* same as §7.3, as required above: SpaceCore
+    `CookingRecipeOverrides` with a `ContextTag` ingredient on
+    `heirloom_tomato_cherry` (Sungold, Peacevine), Amount 2. The vanilla
+    `Data/CookingRecipes` entry (Peacevine ×2 as stand-in) carries the
+    unlock, name, and listing.
+  - *Unlock:* vanilla `f Harvey 3` mail. Vanilla has no `HarveyCooking` letter (found in-game 2026-11-22: the game queued `HarveyCooking`, then dropped it because `Data/mail` had no text for it). The pack therefore adds `Data/mail` → `HarveyCooking` with i18n text and `%item cookingRecipe %%`. The game appears to deliver one friendship recipe letter per night, so Harvey's can arrive a day after another NPC's.
+  - *Numbers:* sell 320g; Edibility 70 (175 energy); no buff.
+    Ingredients: Oil + Vinegar (300g shop cost per this section) + Kale
+    110 + two cherries (Sungold 20 / Peacevine 30 each) ≈ 450–470g.
+    So the dish sells below its inputs, as vanilla salads do, and above
+    Radish Salad (300g, 200 energy) on price but below it on energy.
+  - *Sprite:* object index 19, a wooden bowl of kale with halved red and
+    orange cherries; a different shape from Caprese's plate.
+  - *Unlock shipped:* Harvey recipe mail (not the Saloon fallback).
+  - *Test results (2026-11-22, passed):* Harvey's letter arrived after
+    the `HarveyCooking` fix and read acceptably; one cookbook entry;
+    Sungold ×2, Peacevine ×2, and mixed Sungold + Peacevine all cook it
+    (SpaceCore counts any mix of tagged items toward Amount 2); slicer,
+    paste, and vanilla tomatoes are refused; sprite and description
+    acceptable; sells for 320g.
 
 ### 7.6 Cooking: Heirloom Tomato Bisque (paste-variety dish)
 

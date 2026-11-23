@@ -42,5 +42,10 @@
   "config.BasilSource.values.Cornucopia": "Cornucopia's basil (if installed)",
   "HeirloomCaprese.name": "Heirloom Caprese",
   "HeirloomCaprese.description": "Thick slices of heirloom tomato layered with fresh cheese and basil, finished with a balsamic-style dressing.",
-  "Ingredient.SlicingHeirloomTomato": "Slicing Heirloom Tomato (any)"
+  "Ingredient.SlicingHeirloomTomato": "Slicing Heirloom Tomato (any)",
+  "HeirloomCherrySalad.name": "Heirloom Cherry Salad",
+  "HeirloomCherrySalad.description": "Halved cherry tomatoes tossed with tender kale in oil and vinegar. Bright, sweet, and good for you.",
+  "Ingredient.CherryHeirloomTomato": "Cherry Heirloom Tomato (any)",
+  "Mail.HarveyCooking.body": "@,^^Doctor's orders: more fresh vegetables. I've been making this little salad with cherry tomatoes and kale, and it's honestly one of the healthiest things I eat. I've written the recipe down for you.^^   -Harvey",
+  "Mail.HarveyCooking.title": "Harvey's Recipe"
 }
