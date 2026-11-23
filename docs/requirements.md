@@ -685,6 +685,31 @@ Requirements:
   needs no compensation. Verify Gus (Loved), Jodi (Loved), Robin and
   Sebastian (Liked, *not* Loved), three ordinary Likers, and the expected
   cooked-dish Dislikers Krobus, Leo, and Willy (see the audit doc).
+- **Implementation record (2026-11-22, in-game test passed 2026-11-22):**
+  - *Mechanism:* same as §§7.3/7.5: SpaceCore `CookingRecipeOverrides`
+    with a `ContextTag` ingredient on `heirloom_tomato_paste` (San
+    Marzano, Amish Paste), Amount 2. "Any milk" is a second `ContextTag`
+    ingredient on the 1.6 built-in `category_milk` tag (Milk, Large
+    Milk, Goat Milk, Large Goat Milk), shown with the vanilla Milk icon.
+    The vanilla `Data/CookingRecipes` entry (San Marzano ×2 + Milk as
+    stand-in) carries the unlock, name, and listing.
+  - *Unlock:* vanilla `f Gus 7` mail via the existing `GusCooking`
+    letter (no new mail needed, unlike Harvey in §7.5).
+  - *Numbers:* sell 250g; Edibility 80 (200 energy); no buff. Inputs:
+    2× San Marzano (70) + Milk (125) = 265g, up to 2× Amish Paste (105)
+    + Milk = 335g. The dish sells below its inputs, as vanilla soups do
+    (Pumpkin Soup 300g from 445g of inputs), and sits mid-band between
+    Lobster Bisque (205g / 225 energy) and Pumpkin Soup (300g / 200).
+  - *Sprite:* object index 20, a cream ceramic bowl of deep-red soup
+    with a pale swirl; a different shape from Caprese's plate and Cherry
+    Salad's wooden bowl.
+  - *Unlock shipped:* Gus recipe mail (not the Saloon fallback).
+  - *Test results (2026-11-22, passed):* Gus's letter arrived and taught
+    the recipe; one cookbook entry; San Marzano ×2, Amish Paste ×2, and
+    mixed all cook it, including farm-grown fruit; Milk, Large Milk,
+    Goat Milk, and Large Goat Milk all qualify; beefsteak, cherry, and
+    vanilla tomatoes are refused; sprite and description acceptable;
+    sells for 250g.
 
 ### 7.7 Cooking: Heirloom Tomato Shakshuka (tentative second paste dish)
 

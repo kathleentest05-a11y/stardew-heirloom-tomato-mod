@@ -1,7 +1,7 @@
 {
   "Changes": [
     {
-      "LogName": "Heirloom tomato dish objects (Caprese, Cherry Salad)",
+      "LogName": "Heirloom tomato dish objects (Caprese, Cherry Salad, Bisque)",
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
@@ -26,16 +26,28 @@
           "Texture": "Mods/{{ModId}}/Objects",
           "SpriteIndex": 19,
           "Edibility": 70
+        },
+        "{{ModId}}_HeirloomTomatoBisque": {
+          "Name": "Heirloom Tomato Bisque",
+          "DisplayName": "{{i18n: HeirloomTomatoBisque.name}}",
+          "Description": "{{i18n: HeirloomTomatoBisque.description}}",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 250,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 20,
+          "Edibility": 80
         }
       }
     },
     {
-      "LogName": "Heirloom tomato cooking recipes (Caprese: Gus 3 hearts; Cherry Salad: Harvey 3 hearts; ingredients overridden by SpaceCore below)",
+      "LogName": "Heirloom tomato cooking recipes (Caprese: Gus 3 hearts; Cherry Salad: Harvey 3 hearts; Bisque: Gus 7 hearts; ingredients overridden by SpaceCore below)",
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
         "{{ModId}}_HeirloomCaprese": "424 1 {{BasilItemId}} 1 419 1 {{ModId}}_MortgageLifterTomato 1/1 1/{{ModId}}_HeirloomCaprese/f Gus 3/{{i18n: HeirloomCaprese.name}}",
-        "{{ModId}}_HeirloomCherrySalad": "247 1 419 1 250 1 {{ModId}}_PeacevineTomato 2/1 1/{{ModId}}_HeirloomCherrySalad/f Harvey 3/{{i18n: HeirloomCherrySalad.name}}"
+        "{{ModId}}_HeirloomCherrySalad": "247 1 419 1 250 1 {{ModId}}_PeacevineTomato 2/1 1/{{ModId}}_HeirloomCherrySalad/f Harvey 3/{{i18n: HeirloomCherrySalad.name}}",
+        "{{ModId}}_HeirloomTomatoBisque": "{{ModId}}_SanMarzanoTomato 2 184 1/1 1/{{ModId}}_HeirloomTomatoBisque/f Gus 7/{{i18n: HeirloomTomatoBisque.name}}"
       }
     },
     {
@@ -47,7 +59,7 @@
       }
     },
     {
-      "LogName": "Heirloom tomato recipe ingredients via SpaceCore context tags (slicer for Caprese, cherry for Cherry Salad)",
+      "LogName": "Heirloom tomato recipe ingredients via SpaceCore context tags (slicer for Caprese, cherry for Cherry Salad, paste + any milk for Bisque)",
       "Action": "EditData",
       "Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
       "Entries": {
@@ -113,6 +125,38 @@
               "OverrideTextureRect": {
                 "X": 96,
                 "Y": 0,
+                "Width": 16,
+                "Height": 16
+              }
+            }
+          ]
+        },
+        "{{ModId}}_HeirloomTomatoBisque": {
+          "ProductQualifiedId": "(O){{ModId}}_HeirloomTomatoBisque",
+          "ProductAmount": 1,
+          "Ingredients": [
+            {
+              "Type": "ContextTag",
+              "Value": "heirloom_tomato_paste",
+              "Amount": 2,
+              "OverrideText": "{{i18n: Ingredient.PasteHeirloomTomato}}",
+              "OverrideTexturePath": "Mods/{{ModId}}/Objects",
+              "OverrideTextureRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 16,
+                "Height": 16
+              }
+            },
+            {
+              "Type": "ContextTag",
+              "Value": "category_milk",
+              "Amount": 1,
+              "OverrideText": "{{i18n: Ingredient.AnyMilk}}",
+              "OverrideTexturePath": "Maps/springobjects",
+              "OverrideTextureRect": {
+                "X": 256,
+                "Y": 112,
                 "Width": 16,
                 "Height": 16
               }
